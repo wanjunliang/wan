@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns: xmlns: xmlns:>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>亿丰 | 新闻列表</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="../../pagination/style/pagination.css" rel="stylesheet" type="text/css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="../../sampleInBootstrapV3/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li>
+                    <a href="news_list.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="table_data_tables.html">数据查询</a></li>
+                        <li><a href="ecommerce_products_grid.html">数据网格</a></li>
+                        <li><a href="graph_flot.html">数据统计</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="news_list.html#"><i class="fa fa-table"></i> <span class="nav-label">新闻</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="news_ueditor.html">编辑新闻</a></li>
+                        <li class="active"><a href="news_list.html">新闻列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news_list.html#"><i class="fa fa-table"></i>
+                        <span class="nav-label">个人</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="personalInfoUpdate.html">个人信息编辑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-table"></i>
+                        <span class="nav-label">微信管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="weixinManage.html">微信用户管理</a></li>
+                    </ul>
+                </li>
+                <li class="landing_link">
+                    <a target="_blank" href="../../yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="news_list.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到天道筑亿丰科技有限公司</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>新闻列表</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>新闻</a>
+                    </li>
+                    <li class="active">
+                        <strong>新闻列表</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>新闻列表</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="news_list.html#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="table_data_tables.html#">Config option 1</a>
+                                    </li>
+                                    <li><a href="table_data_tables.html#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <!--<div class="table-responsive">-->
+                            <div id="div_foo_table">
+
+                                <!--<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="2">-->
+                                    <!--<thead>-->
+                                    <!--<tr>-->
+                                        <!--<th data-toggle="true">新闻标题</th>-->
+                                        <!--<th>创建人</th>-->
+                                        <!--<th>创建时间</th>-->
+                                        <!--<th data-hide="all">最后修改人</th>-->
+                                        <!--<th data-hide="all">最后修改时间</th>-->
+                                        <!--<th>修改</th>-->
+                                        <!--<th>删除</th>-->
+                                    <!--</tr>-->
+                                    <!--</thead>-->
+                                    <!--<tbody id="fooTableTbody">-->
+                                    <!--<tr>-->
+                                        <!--<td>1</td>-->
+                                        <!--<td>2</td>-->
+                                        <!--<td>3</td>-->
+                                        <!--<td>4</td>-->
+                                        <!--<td>5</td>-->
+                                        <!--<td>6</td>-->
+                                        <!--<td>7</td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+                                    <!--<tfoot>-->
+                                    <!--<tr>-->
+                                        <!--<td colspan="5">-->
+                                            <!--<ul class="pagination pull-right"></ul>-->
+                                        <!--</td>-->
+                                    <!--</tr>-->
+                                    <!--</tfoot>-->
+
+                                <!--</table>-->
+                            </div>
+
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="../../pagination/script/jquery.pagination.js"></script>
+<!-- Page-Level Scripts -->
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<!-- Input Mask-->
+<script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- NouSlider -->
+<script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+<!-- Color picker -->
+<script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- Clock picker -->
+<script src="js/plugins/clockpicker/clockpicker.js"></script>
+<!-- TouchSpin -->
+<script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Date range picker -->
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="Ueditor/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="Ueditor/lang/zh-cn/zh-cn.js"></script>
+
+<!-- FooTable -->
+<script src="js/plugins/footable/footable.all.min.js"></script>
+<script>
+    $(document).ready(function(){
+//        获取登录用户信息
+        user_info();
+//        获取新闻的数据
+        selectNewsTitleList();
+        $('.footable').footable();
+    });
+</script>
+<!-- Page-Level Scripts -->
+<script type="text/javascript">
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+
+</script>
+
+<script type="text/javascript">
+    //加载用户的信息
+    function user_info(){
+        click_login_or_logout();
+//             document.getElementById('strong_user_name').innerHTML = getCookie("user_id");
+        //想后台请求用户的信息通过用户ID
+    }
+    //得到cookie
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function decode(s) {
+        return unescape(s.replace(/\\(u[0-9a-fA-F]{4})/gm, '%$1'));
+    }
+    function click_login_or_logout(){
+        var flag_islogined=false;
+        $.ajax({
+            url: getContextPath() + "/login/islogined",
+            async: true,
+            type: "post",
+            dataType: "json",
+            data: {
+            },
+            success: function (data) {
+                if(data.islogined==true){
+                    //已经登录了的
+                    flag_islogined=true;
+                    $("#strong_user_name").html(data.user.user_name);
+                    $("#img_src_head").attr("src",getContextPath()+"/img_head/"+data.user.img_src_head);
+                }
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+        if(flag_islogined==true){
+            //已经登录了
+            var item="<i class='fa fa-sign-out'></i>"+"注销";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').onclick=function () {
+                $.ajax({
+                    url: getContextPath() + "/login/logout",
+                    async: false,
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                    },
+                    success: function (data) {
+                        alert(data.tip);
+                        location.reload();
+                    },
+                    error:function (data) {
+                        alert("发生错误");
+                    }
+                });
+            };
+        }
+        else{
+            //没有登录
+            var item="<i class='fa fa-sign-out'></i>"+"登录";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').href="login.html";
+        }
+    }
+</script>
+
+<script type="text/javascript">
+
+//    获取新闻数据
+    function selectNewsTitleList() {
+        $.ajax({
+            url:getContextPath()+"/news/selectNewsTitleList",
+            async: false,
+            type:"post",
+            dataType:"json",
+            data:{
+                //可以传新闻标题或者创建人或者创建时间等等参数
+            },
+            success:function(data){
+                createFooTable(data);
+
+            },
+            error:function (data) {
+                alert("返回json数据失败");
+            }
+        });
+
+    }
+</script>
+<script type="text/javascript">
+    function createFooTable(data) {
+        var fooTable='<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="10">'+
+            '<thead>'+
+            '<tr>'+
+            '<th data-toggle="true">新闻标题</th>'+
+            '<th>创建人</th>'+
+            '<th>创建时间</th>'+
+            '<th data-hide="all">最后修改人</th>'+
+            '<th data-hide="all">最后修改时间</th>'+
+            '<th>操作</th>'+
+            '</tr>'+
+            '</thead>';
+        var tempList='<tbody>';
+        $.each(data['newsTitleList'],function(i,newTitle){
+            var temp="<tr>" +
+                "<td>"+newTitle['news_title_text']+"</td>"+
+                "<td>"+newTitle['create_name']+"</td>"+
+                "<td>"+newTitle['news_create_date']+"</td>"+
+                "<td>"+newTitle['update_name']+"</td>"+
+                "<td>"+newTitle['news_update_date']+"</td>"+
+                '<td>' +
+                    '<div class="btn-group">' +
+                    '<button class="btn-white btn btn-xs" onclick="toUpdate('+newTitle['news_title_id']+','+newTitle['news_content_id']+');">修改</button>' +
+                    '<button class="btn-white btn btn-xs" onclick="confirm(deleteNews,'+newTitle['news_title_id']+','+newTitle['news_content_id']+');">删除</button>' +
+                    '</div>'
+                '</td>'+
+                "</tr>";
+            tempList+=temp;
+        });
+        tempList+='</tbody>';
+        fooTable+=tempList;
+        fooTable+='<tfoot>'+
+            '<tr>'+
+            '<td colspan="5">'+
+            '<ul class="pagination pull-right"></ul>'+
+            '</td>'+
+            '</tr>'+
+            '</tfoot>'+
+            '</table>';
+        $("#div_foo_table").empty("");
+        $("#div_foo_table").append(fooTable);
+//        document.getElementById('div_foo_table').innerHTML=fooTable;
+//        生成footable
+        $('.footable').footable();
+    }
+</script>
+<!--新闻编辑完成,发布新闻-->
+
+<!--确认框-->
+<script type="text/javascript">
+    /**
+     * 重写确认框 fun:函数对象 params:参数列表， 可以是数组
+     */
+    function confirm(fun, news_title_id,news_content_id) {
+        if ($("#myConfirm").length > 0) {
+            $("#myConfirm").remove();
+        }
+        var html = "<div class='modal fade' id='myConfirm' >"
+            + "<div class='modal-backdrop in' style='opacity:0; '></div>"
+            +" <div class='row col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 '>"
+            + "<div class='modal-dialog col-xs-4 col-sm-4 col-md-4 col-lg-4 ' style='z-index:2901; margin-top:60px; '>"
+            + "<div class='modal-content'>"
+            + "<div class='modal-header'  style='font-size:16px; '>"
+            + "<span class='glyphicon glyphicon-envelope'>&nbsp;</span>提示:<button type='button' class='close' data-dismiss='modal'>"
+            + "<span style='font-size:20px;  ' class='glyphicon glyphicon-remove'></span><tton></div>"
+            + "<div class='modal-body text-center' id='myConfirmContent' style='font-size:18px; '>"
+            + "您确定要删除该新闻?"
+            + "</div>"
+            + "<div class='modal-footer ' style=''>"
+            + "<button class='btn btn-danger ' id='confirmOk' >确定<tton>"
+            + "<button class='btn btn-info ' data-dismiss='modal'>取消<tton>"
+            + "</div>" + "</div></div></div></div>";
+        $("body").append(html);
+
+        $("#myConfirm").modal("show");
+//        $('#myConfirm').modal({"backdrop":"static"}).modal('show').on("shown.bs.modal",function(){
+        // 是弹出框居中。。。
+//            var $modal_dialog = $(this.$element[1][0]).find('.modal-dialog');
+//            //获取可视窗口的高度
+//            var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+//            //得到dialog的高度
+//            var dialogHeight = $modal_dialog.height();
+//            //计算出距离顶部的高度
+//            var m_top = (clientHeight - dialogHeight)/2;
+//            $modal_dialog.css({'margin': m_top + 'px auto'});
+
+
+//            方法2
+//            $(this).find('.modal-dialog').css({
+//                'margin-top': function () {
+//                    var modalHeight = $('#myConfirm').find('.modal-dialog').height();
+//                    return ($(window).height() / 2 - (modalHeight / 2));
+//                }
+//            });
+
+//        });
+        $("#confirmOk").on("click", function() {
+            $("#myConfirm").modal("hide");
+            fun(news_title_id,news_content_id); // 执行函数
+        });
+    }
+</script>
+<!--确认框-->
+<!--提示框-->
+<script type="text/javascript">
+    /**
+     * 提示框
+     */
+    function confirm2(fun, params,tip) {
+        if ($("#myConfirm2").length > 0) {
+            $("#myConfirm2").remove();
+        }
+        var html = "<div class='modal fade' id='myConfirm2' >"
+            + "<div class='modal-backdrop in' style='opacity:0; '></div>"
+            +" <div class='row col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 '>"
+            + "<div class='modal-dialog col-xs-4 col-sm-4 col-md-4 col-lg-4 ' style='z-index:2901; margin-top:60px; '>"
+            + "<div class='modal-content'>"
+            + "<div class='modal-header'  style='font-size:16px; '>"
+            + "<span class='glyphicon glyphicon-envelope'>&nbsp;</span>提示:<button type='button' class='close' data-dismiss='modal'>"
+            + "<span style='font-size:20px;  ' class='glyphicon glyphicon-remove'></span><tton></div>"
+            + "<div class='modal-body text-center' id='myConfirmContent2' style='font-size:18px; '>"
+            + tip
+            + "</div>"
+            + "<div class='modal-footer ' style=''>"
+            + "<button class='btn btn-danger ' id='confirmOk2' >确定<tton>"
+            + "</div>" + "</div></div></div></div>";
+        $("body").append(html);
+
+        $("#myConfirm2").modal("show");
+
+        $("#confirmOk2").on("click", function() {
+            $("#myConfirm2").modal("hide");
+            fun(params); // 执行函数
+        });
+    }
+</script>
+<!--确认框-->
+<script type="text/javascript">
+//    更新新闻跳转到新闻编辑页面
+    function toUpdate(news_title_id,news_content_id) {
+        window.location.href='news_ueditor.html?flag_update=1&news_title_id='+news_title_id+'&news_content_id='+news_content_id;
+    }
+//    删除新闻,假删除
+    function deleteNews(news_title_id,news_content_id){
+        $.ajax({
+            url:getContextPath()+"/news/deleteNews",
+            async: true,
+            type:"post",
+            dataType:"json",
+            data:{
+                //可以传新闻标题或者创建人或者创建时间等等参数
+                news_title_id:news_title_id,
+            },
+            success:function(data){
+                if(data.tip=="SUCC"){//删除成功
+                    //再次查询一次新闻数据,并且绘制表格
+                    confirm2(selectNewsTitleList, null,"删除成功!");
+                }
+                else{//删除失败
+                    confirm2(selectNewsTitleList, null,"删除失败!");
+                }
+            },
+            error:function (data) {
+                alert("返回json数据失败");
+            }
+        });
+
+    }
+</script>
+
+</body>
+
+</html>

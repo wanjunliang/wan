@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html xmlns: xmlns: xmlns:>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>亿丰 | 新闻编辑</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="../../pagination/style/pagination.css" rel="stylesheet" type="text/css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="../../sampleInBootstrapV3/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director<b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li>
+                    <a href="news_ueditor.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="table_data_tables.html">数据查询</a></li>
+                        <li><a href="ecommerce_products_grid.html">数据网格</a></li>
+                        <li><a href="graph_flot.html">数据统计</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="news_ueditor.html#"><i class="fa fa-table"></i> <span class="nav-label">新闻</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a href="news_ueditor.html">编辑新闻</a></li>
+                        <li><a href="news_list.html">新闻列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news_ueditor.html#"><i class="fa fa-table"></i>
+                        <span class="nav-label">个人</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="personalInfoUpdate.html">个人信息编辑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-table"></i>
+                        <span class="nav-label">微信管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="weixinManage.html">微信用户管理</a></li>
+                    </ul>
+                </li>
+                <li class="landing_link">
+                    <a target="_blank" href="../../yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="news_ueditor.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到天道筑亿丰科技有限公司</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>新闻编辑</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>新闻</a>
+                    </li>
+                    <li class="active">
+                        <strong>新闻编辑</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>新闻编辑</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="table_data_tables.html#">Config option 1</a>
+                                    </li>
+                                    <li><a href="table_data_tables.html#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <div class="table-responsive">
+
+                                <input type="button" class="btn btn-primary btn-sm" value="编辑完成,发布新闻" onclick="confirm(submitNews,null);"/>
+                                <div class="form-group"><label class="col-sm-2 control-label">新闻标题:</label>
+                                    <div class="col-sm-10"><input id="input_news_title" type="text" class="form-control"  ></div>
+                                </div>
+                                <div class="form-group"><label class="col-sm-2 control-label">新闻内容:</label>
+                                    <div class="col-sm-10">
+                                        <!--<textarea id="editor" type="text/plain" style="width:1024px;height:500px;"></textarea>-->
+                                        <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+                                    </div>
+                                </div>
+                                <!--<div id="btns">-->
+                                    <!--<div>-->
+                                        <!--<button onclick="getAllHtml()">获得整个html的内容</button>-->
+                                        <!--<button onclick="getContent()">获得内容</button>-->
+                                        <!--<button onclick="setContent()">写入内容</button>-->
+                                        <!--<button onclick="setContent(true)">追加内容</button>-->
+                                        <!--<button onclick="getContentTxt()">获得纯文本</button>-->
+                                        <!--<button onclick="getPlainTxt()">获得带格式的纯文本</button>-->
+                                        <!--<button onclick="hasContent()">判断是否有内容</button>-->
+                                        <!--<button onclick="setFocus()">使编辑器获得焦点</button>-->
+                                        <!--<button onmousedown="isFocus(event)">编辑器是否获得焦点</button>-->
+                                        <!--<button onmousedown="setblur(event)" >编辑器失去焦点</button>-->
+
+                                    <!--</div>-->
+                                    <!--<div>-->
+                                        <!--<button onclick="getText()">获得当前选中的文本</button>-->
+                                        <!--<button onclick="insertHtml()">插入给定的内容</button>-->
+                                        <!--<button id="enable" onclick="setEnabled()">可以编辑</button>-->
+                                        <!--<button onclick="setDisabled()">不可编辑</button>-->
+                                        <!--<button onclick=" UE.getEditor('editor').setHide()">隐藏编辑器</button>-->
+                                        <!--<button onclick=" UE.getEditor('editor').setShow()">显示编辑器</button>-->
+                                        <!--<button onclick=" UE.getEditor('editor').setHeight(300)">设置高度为300默认关闭了自动长高</button>-->
+                                    <!--</div>-->
+
+                                    <!--<div>-->
+                                        <!--<button onclick="getLocalData()" >获取草稿箱内容</button>-->
+                                        <!--<button onclick="clearLocalData()" >清空草稿箱</button>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                                <!--<div>-->
+                                    <!--<button onclick="createEditor()">-->
+                                        <!--创建编辑器</button>-->
+                                    <!--<button onclick="deleteEditor()">-->
+                                        <!--删除编辑器</button>-->
+                                <!--</div>-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="../../pagination/script/jquery.pagination.js"></script>
+<!-- Page-Level Scripts -->
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<!-- Input Mask-->
+<script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- NouSlider -->
+<script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+<!-- Color picker -->
+<script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- Clock picker -->
+<script src="js/plugins/clockpicker/clockpicker.js"></script>
+<!-- TouchSpin -->
+<script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Date range picker -->
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="Ueditor/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="Ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+//    $(document).ready(function(){
+//        user_info();
+        //1.首先要判断是否是新增新闻还是修改新闻通过url传递的参数
+//        check_insert_or_update();
+//    });
+    window.onload=function(){
+        user_info();
+        //1.首先要判断是否是新增新闻还是修改新闻通过url传递的参数
+        //只能放在  onload方法里否则无效
+        check_insert_or_update();
+    }
+</script>
+<script type="text/javascript">
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+
+</script>
+
+<script type="text/javascript">
+    //加载用户的信息
+    function user_info(){
+        click_login_or_logout();
+//             document.getElementById('strong_user_name').innerHTML = getCookie("user_id");
+        //想后台请求用户的信息通过用户ID
+    }
+    //得到cookie
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function decode(s) {
+        return unescape(s.replace(/\\(u[0-9a-fA-F]{4})/gm, '%$1'));
+    }
+    function click_login_or_logout(){
+        var flag_islogined=false;
+        $.ajax({
+            url: getContextPath() + "/login/islogined",
+            async: true,
+            type: "post",
+            dataType: "json",
+            data: {
+            },
+            success: function (data) {
+                if(data.islogined==true){
+                    //已经登录了的
+                    flag_islogined=true;
+                    $("#strong_user_name").html(data.user.user_name);
+                    $("#img_src_head").attr("src",getContextPath()+"/img_head/"+data.user.img_src_head);
+                }
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+        if(flag_islogined==true){
+            //已经登录了
+            var item="<i class='fa fa-sign-out'></i>"+"注销";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').onclick=function () {
+                $.ajax({
+                    url: getContextPath() + "/login/logout",
+                    async: false,
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                    },
+                    success: function (data) {
+                        alert(data.tip);
+                        location.reload();
+                    },
+                    error:function (data) {
+                        alert("发生错误");
+                    }
+                });
+            };
+        }
+        else{
+            //没有登录
+            var item="<i class='fa fa-sign-out'></i>"+"登录";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').href="login.html";
+        }
+    }
+</script>
+<!--ueditor-->
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+</script>
+<!--新闻编辑完成,发布新闻-->
+<script type="text/javascript">
+    function check(){
+        if($("#input_news_title").val()==""){
+            confirm2(null,null,'请填写新闻标题!');
+            $("#input_news_title").focus();
+            return false;
+        }
+        if(UE.getEditor('editor').hasContents()==false){
+            confirm2(null,null,'请编辑新闻内容!');
+            return false;
+        }
+        return true;
+    }
+    function submitNews() {
+        if(check()==false){
+            return ;
+        }
+        $.ajax({
+            url:getContextPath()+"/news/insertNews",
+            async: false,
+            type:"post",
+            dataType:"json",
+            traditional :true,    //必须加上该句话来序列化,否则复选框没有效果
+            data:{
+                news_title_text:$('#input_news_title').val(),
+                news_content_text:UE.getEditor('editor').getContent(),
+                flag_update:GetQueryString("flag_update"),
+                title_id:GetQueryString("news_title_id"),
+                content_id:GetQueryString("news_content_id"),
+            },
+            success:function(data){
+                if(data.tip=='SUCC'){
+                   alert("新闻发布成功,打开公司主页面");
+                    window.open(getContextPath()+'/yfhtml/index.html');
+                }
+                else if(data.tip=='FAIL'){
+                    alert("新闻发布失败");
+                }
+            },
+            error:function (data) {
+                alert("返回json数据失败");
+            }
+        });
+    }
+</script>
+<!--新闻编辑完成,发布新闻-->
+
+<!--确认框-->
+<script type="text/javascript">
+    /**
+     * 重写确认框 fun:函数对象 params:参数列表， 可以是数组
+     */
+    function confirm(fun, params) {
+        if ($("#myConfirm").length > 0) {
+            $("#myConfirm").remove();
+        }
+        var html = "<div class='modal fade' id='myConfirm' >"
+            + "<div class='modal-backdrop in' style='opacity:0; '></div>"
+            +" <div class='row col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 '>"
+            + "<div class='modal-dialog col-xs-4 col-sm-4 col-md-4 col-lg-4 ' style='z-index:2901; margin-top:60px; '>"
+            + "<div class='modal-content'>"
+            + "<div class='modal-header'  style='font-size:16px; '>"
+            + "<span class='glyphicon glyphicon-envelope'>&nbsp;</span>提示:<button type='button' class='close' data-dismiss='modal'>"
+            + "<span style='font-size:20px;  ' class='glyphicon glyphicon-remove'></span><tton></div>"
+            + "<div class='modal-body text-center' id='myConfirmContent' style='font-size:18px; '>"
+            + "您确定发布新闻?"
+            + "</div>"
+            + "<div class='modal-footer ' style=''>"
+            + "<button class='btn btn-danger ' id='confirmOk' >确定<tton>"
+            + "<button class='btn btn-info ' data-dismiss='modal'>取消<tton>"
+            + "</div>" + "</div></div></div></div>";
+        $("body").append(html);
+
+        $("#myConfirm").modal("show");
+//        $('#myConfirm').modal({"backdrop":"static"}).modal('show').on("shown.bs.modal",function(){
+            // 是弹出框居中。。。
+//            var $modal_dialog = $(this.$element[1][0]).find('.modal-dialog');
+//            //获取可视窗口的高度
+//            var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+//            //得到dialog的高度
+//            var dialogHeight = $modal_dialog.height();
+//            //计算出距离顶部的高度
+//            var m_top = (clientHeight - dialogHeight)/2;
+//            $modal_dialog.css({'margin': m_top + 'px auto'});
+
+
+//            方法2
+//            $(this).find('.modal-dialog').css({
+//                'margin-top': function () {
+//                    var modalHeight = $('#myConfirm').find('.modal-dialog').height();
+//                    return ($(window).height() / 2 - (modalHeight / 2));
+//                }
+//            });
+
+//        });
+        $("#confirmOk").on("click", function() {
+            $("#myConfirm").modal("hide");
+            fun(params); // 执行函数
+        });
+    }
+</script>
+<!--确认框-->
+<!--提示框-->
+<script type="text/javascript">
+    /**
+     * 提示框
+     */
+    function confirm2(fun, params,tip) {
+        if ($("#myConfirm2").length > 0) {
+            $("#myConfirm2").remove();
+        }
+        var html = "<div class='modal fade' id='myConfirm2' >"
+            + "<div class='modal-backdrop in' style='opacity:0; '></div>"
+            +" <div class='row col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 '>"
+            + "<div class='modal-dialog col-xs-4 col-sm-4 col-md-4 col-lg-4 ' style='z-index:2901; margin-top:60px; '>"
+            + "<div class='modal-content'>"
+            + "<div class='modal-header'  style='font-size:16px; '>"
+            + "<span class='glyphicon glyphicon-envelope'>&nbsp;</span>提示:<button type='button' class='close' data-dismiss='modal'>"
+            + "<span style='font-size:20px;  ' class='glyphicon glyphicon-remove'></span><tton></div>"
+            + "<div class='modal-body text-center' id='myConfirmContent2' style='font-size:18px; '>"
+            + tip
+            + "</div>"
+            + "<div class='modal-footer ' style=''>"
+            + "<button class='btn btn-danger ' id='confirmOk2' >确定<tton>"
+            + "</div>" + "</div></div></div></div>";
+        $("body").append(html);
+
+        $("#myConfirm2").modal("show");
+
+        $("#confirmOk2").on("click", function() {
+            $("#myConfirm2").modal("hide");
+//            fun(params); // 执行函数
+        });
+    }
+</script>
+<!--确认框-->
+<script type="text/javascript">
+    //    获取url地址传递的参数
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+    //先检测是新增新闻还是更新新闻
+    function check_insert_or_update() {
+        var flag_update=GetQueryString("flag_update");
+        if(flag_update==1){ //那么是更新新闻
+            //如果是更新新闻,先获取url参数 新闻标题的id
+            var news_title_id=GetQueryString("news_title_id");
+            //通过这个ID向后台发送请求,获取新闻标题和新闻内容数据
+            selectNewsTitleContentByNewsTitleId(news_title_id);
+        }
+        else{//其他情况是 新增新闻
+
+        }
+    }
+    function selectNewsTitleContentByNewsTitleId(news_title_id) {
+        $.ajax({
+            url:getContextPath()+"/news/selectNewsTitleContentByNewsTitleId",
+            async: true,
+            type:"post",
+            dataType:"json",
+            data:{
+                news_title_id:news_title_id,
+            },
+            success:function(data){
+                var news_title_text=data['newsTitleContent']['news_title_text'];
+                var news_content_text=data['newsTitleContent']['newsContent']['news_content_text'];
+                //得到数据后要向html中加入进去
+                $('#input_news_title').val(news_title_text);
+                UE.getEditor('editor').execCommand('insertHtml', news_content_text);
+            },
+            error:function (data) {
+                alert("返回json数据失败");
+            }
+        });
+    }
+</script>
+
+</body>
+
+</html>

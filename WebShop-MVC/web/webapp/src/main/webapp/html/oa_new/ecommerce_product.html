@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | E-commerce</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+<!--时间控件-->
+    <link href="../../sampleInBootstrapV3/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="ecommerce_product.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="table_data_tables.html">数据查询</a></li>
+                        <li><a href="ecommerce_products_grid.html">数据网格</a></li>
+                        <li><a href="graph_flot.html">数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ecommerce_product.html#"><i class="fa fa-table"></i> <span class="nav-label">新闻</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="news_ueditor.html">新增新闻</a></li>
+                        <li><a href="news_list.html">新增列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ecommerce_product.html#"><i class="fa fa-table"></i>
+                        <span class="nav-label">个人</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="personalInfoUpdate.html">个人信息编辑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-table"></i>
+                        <span class="nav-label">微信管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="weixinManage.html">微信用户管理</a></li>
+                    </ul>
+                </li>
+                <li class="landing_link">
+                    <a target="_blank" href="../../yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="table_data_tables.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到天道筑亿丰科技有限公司</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Product edit</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>E-commerce</a>
+                    </li>
+                    <li class="active">
+                        <strong>Product edit</strong>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tabs-container">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="ecommerce_product.html#tab-1"> 基本信息</a></li>
+                                <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-2"> 数据</a></li>
+                                <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-3"> 待定</a></li>
+                                <li class=""><a data-toggle="tab" href="ecommerce_product.html#tab-4"> 图片</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="panel-body">
+
+                                        <fieldset class="form-horizontal">
+                                            <div class="form-group"><label class="col-sm-2 control-label">房产名:</label>
+                                                <div class="col-sm-10"><input id="input_house_name" type="text" class="form-control" placeholder="房产名,地址" disabled="disabled"></div>
+                                            </div>
+                                            <!--<div class="form-group"><label class="col-sm-2 control-label">成交价:</label>-->
+                                                <!--<div class="col-sm-10"><input id="input_bargained_price" type="text" class="form-control" ></div>-->
+                                            <!--</div>-->
+                                            <!--<div class="form-group"><label class="col-sm-2 control-label">Description:</label>-->
+                                                <!--<div class="col-sm-10">-->
+                                                    <!--<div class="summernote">-->
+                                                        <!--<h3>Lorem Ipsum is simply</h3>-->
+                                                        <!--dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,-->
+                                                        <!--when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic-->
+                                                        <!--when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic-->
+                                                        <!--typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with-->
+                                                        <!--<br/>-->
+
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <div class="form-group"><label class="col-sm-2 control-label">法院:</label>
+                                                <div class="col-sm-10"><input id="intut_court_name" type="text" class="form-control" ></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">地区:</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="select_house_region">
+                                                        <option value="锦江">锦江区</option>
+                                                        <option value="武侯">武侯区</option>
+                                                        <option value="青羊">青羊区</option>
+                                                        <option value="金牛">金牛区</option>
+                                                        <option value="成华">成华区</option>
+                                                        <option value="双流">双流区</option>
+                                                        <option value="高新">高新区</option>
+                                                        <option value="天府新">天府新区</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">当前状态:</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="select_current_status">
+                                                        <option value="正在进行">正在进行</option>
+                                                        <option value="即将开始">即将开始</option>
+                                                        <option value="已结束">已结束</option>
+                                                        <option value="中止">中止</option>
+                                                        <option value="撤回">撤回</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">房产类型:</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="select_house_type">
+                                                        <option value="住宅">住宅</option>
+                                                        <option value="商业">商业</option>
+                                                        <option value="办公">办公</option>
+                                                        <option value="其他">其他</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <input type="button" class="btn btn-primary btn-sm" value="提交修改" onclick=""/>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="panel-body">
+
+                                        <fieldset class="form-horizontal">
+                                            <div class="form-group"><label class="col-sm-2 control-label">起拍价:</label>
+                                                <div class="col-sm-10"><input id="input_auction_price" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">当前价:</label>
+                                                <div class="col-sm-10"><input id="input_current_price" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">成交价:</label>
+                                                <div class="col-sm-10"><input id="input_bargained_price" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">成交时间:</label>
+                                                <div class="col-sm-10"><input id="input_bargained_time" type="text" class="form-control" placeholder="2017-01-01 00:00:00"></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">房产面积(单位:平方米):</label>
+                                                <div class="col-sm-10"><input id="input_house_area" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">开拍时间:</label>
+                                                <div class="col-sm-10"><input id="input_house_start_time" type="text" class="form-control" placeholder="2017-01-01"></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">司法淘宝网网址:</label>
+                                                <div class="col-sm-10"><input id="input_url_sf_taobao_com" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">人民诉讼资产网网址:</label>
+                                                <div class="col-sm-10"><input id="input_url_rmfysszc_com" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">挂网时间:</label>
+                                                <div class="col-sm-10"><input id="input_house_proclaimtion_time" type="text" class="form-control" placeholder="2017-01-01 00:00:00"></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">竞价周期:</label>
+                                                <div class="col-sm-10"><input id="input_period" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">优先购买权人:</label>
+                                                <div class="col-sm-10"><input id="input_preemption" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">延时周期:</label>
+                                                <div class="col-sm-10"><input id="input_delayed_period" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">评估价:</label>
+                                                <div class="col-sm-10"><input id="input_evaluate" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">加价幅度:</label>
+                                                <div class="col-sm-10"><input id="input_add_price" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">房产单价(起拍价/面积):</label>
+                                                <div class="col-sm-10"><input id="input_house_unit_price" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-2 control-label">保证金:</label>
+                                                <div class="col-sm-10"><input id="input_deposit" type="text" class="form-control" placeholder=""></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <input type="button" class="btn btn-primary btn-sm" value="提交修改" onclick=""/>
+                                                </div>
+                                            </div>
+                                            <!--<div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>-->
+                                                <!--<div class="col-sm-10">-->
+                                                    <!--<select class="form-control" >-->
+                                                        <!--<option>option 1</option>-->
+                                                        <!--<option>option 2</option>-->
+                                                    <!--</select>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        </fieldset>
+
+
+                                    </div>
+                                </div>
+                                <div id="tab-3" class="tab-pane">
+                                    <div class="panel-body">
+
+                                        <div class="table-responsive">
+                                            <table class="table table-stripped table-bordered">
+
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        Group
+                                                    </th>
+                                                    <th>
+                                                        Quantity
+                                                    </th>
+                                                    <th>
+                                                        Discount
+                                                    </th>
+                                                    <th style="width: 20%">
+                                                        Date start
+                                                    </th>
+                                                    <th style="width: 20%">
+                                                        Date end
+                                                    </th>
+                                                    <th>
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                            <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <select class="form-control" >
+                                                            <option selected>Group 1</option>
+                                                            <option>Group 2</option>
+                                                            <option>Group 3</option>
+                                                            <option>Group 4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="10">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="$10.00">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="tab-4" class="tab-pane">
+                                    <div class="panel-body">
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-stripped">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        Image preview
+                                                    </th>
+                                                    <th>
+                                                        Image url
+                                                    </th>
+                                                    <th>
+                                                        Sort order
+                                                    </th>
+                                                    <th>
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/2s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image1.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="1">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/1s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image2.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="2">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/3s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image3.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="3">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/4s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image4.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="4">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/5s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image5.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="5">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/6s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image6.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="6">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="img/gallery/7s.jpg">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" disabled value="http://mydomain.com/images/image7.png">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" value="7">
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-white"><i class="fa fa-trash"></i> </button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2015
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- SUMMERNOTE -->
+<script src="js/plugins/summernote/summernote.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+<!--日期控件-->
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.summernote').summernote();
+
+        $('.input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+        user_info();
+        selectDetailById(GetQueryString("id"));
+    });
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+    //    获取url地址传递的参数
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+    //    查询信息通过id值
+    function selectDetailById(id){
+        $.ajax({
+            url: getContextPath() + "/detail/findDetailInfoById",
+            async: false,
+            type: "post",
+            dataType: "json",
+            data: {
+                id:id
+            },
+            success: function (data) {
+                loadDetailInfo(data.detail_info);
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    //加载用户的信息
+    function user_info(){
+        click_login_or_logout();
+//             document.getElementById('strong_user_name').innerHTML = getCookie("user_id");
+        //想后台请求用户的信息通过用户ID
+    }
+    //得到cookie
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function decode(s) {
+        return unescape(s.replace(/\\(u[0-9a-fA-F]{4})/gm, '%$1'));
+    }
+    function click_login_or_logout(){
+        var flag_islogined=false;
+        $.ajax({
+            url: getContextPath() + "/login/islogined",
+            async: false,
+            type: "post",
+            dataType: "json",
+            data: {
+            },
+            success: function (data) {
+                if(data.islogined==true){
+                    //已经登录了的
+                    flag_islogined=true;
+                    $("#strong_user_name").html(data.user.user_name);
+                    $("#img_src_head").attr("src",getContextPath()+"/img_head/"+data.user.img_src_head);
+                }
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+        if(flag_islogined==true){
+            //已经登录了
+            var item="<i class='fa fa-sign-out'></i>"+"注销";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').onclick=function () {
+                $.ajax({
+                    url: getContextPath() + "/login/logout",
+                    async: false,
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                    },
+                    success: function (data) {
+                        alert(data.tip);
+                        location.reload();
+                    },
+                    error:function (data) {
+                        alert("发生错误");
+                    }
+                });
+            };
+        }
+        else{
+            //没有登录
+            var item="<i class='fa fa-sign-out'></i>"+"登录";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').href="login.html";
+        }
+    }
+</script>
+<script type="text/javascript">
+    //加载数据
+    function loadDetailInfo(detail_info){
+        $("#input_house_name").empty();
+        $("#input_house_name").val(detail_info['house_name']);
+        $("#intut_court_name").empty();
+        $("#intut_court_name").val(detail_info['court_name']);
+        var select_house_region=document.getElementById("select_house_region");
+        for(var i=0;i<select_house_region.options.length;i++){
+            if(detail_info['house_region']==select_house_region.options[i].value){
+                select_house_region.options[i].selected=true;
+                break;
+            }
+        }
+        var select_current_status=document.getElementById("select_current_status");
+        for(var i=0;i<select_current_status.options.length;i++){
+            if(detail_info['current_status']==select_current_status.options[i].value){
+                select_current_status.options[i].selected=true;
+                break;
+            }
+        }
+        var select_house_type=document.getElementById("select_house_type");
+        for(var i=0;i<select_house_type.options.length;i++){
+            if(detail_info['house_type']==select_house_type.options[i].value){
+                select_house_type.options[i].selected=true;
+                break;
+            }
+        }
+//        起拍价
+        $("#input_auction_price").empty();
+        $("#input_auction_price").val(parseFloat(detail_info["auction_price"]).toString());
+//        当前价
+        $("#input_current_price").empty();
+        $("#input_current_price").val(detail_info["current_price"]);
+//        成交价
+        $("#input_bargained_price").empty();
+        $("#input_bargained_price").val(detail_info["bargained_price"]);
+//        成交时间
+        $("#input_bargained_time").empty();
+        $("#input_bargained_time").val(detail_info["bargained_time"]);
+//        房产面积
+        $("#input_house_area").empty();
+        $("#input_house_area").val(detail_info["house_area"]);
+//        开拍时间
+        $("#input_house_start_time").empty();
+        $("#input_house_start_time").val(detail_info["house_start_time"]);
+//        司法淘宝网网址
+        $("#input_url_sf_taobao_com").empty();
+        $("#input_url_sf_taobao_com").val(detail_info["url_sf_taobao_com"]);
+//        人民诉讼资产网网址
+        $("#input_url_rmfysszc_com").empty();
+        $("#input_url_rmfysszc_com").val(detail_info["url_rmfysszc_com"]);
+//        挂网时间
+        $("#input_house_proclaimtion_time").empty();
+        $("#input_house_proclaimtion_time").val(detail_info["house_proclaimtion_time"]);
+//        竞价周期
+        $("#input_period").empty();
+        $("#input_period").val(detail_info["period"]);
+//        优先购买权人
+        $("#input_preemption").empty();
+        $("#input_preemption").val(detail_info["preemption"]);
+//        延时周期
+        $("#input_delayed_period").empty();
+        $("#input_delayed_period").val(detail_info["delayed_period"]);
+//        评估价
+        $("#input_evaluate").empty();
+        $("#input_evaluate").val(detail_info["evaluate"]);
+//        加价幅度
+        $("#input_add_price").empty();
+        $("#input_add_price").val(detail_info["add_price"]);
+//        房产单价   起拍价/面积
+        $("#input_house_unit_price").empty();
+        $("#input_house_unit_price").val(detail_info["house_unit_price"]);
+//        保证金
+        $("#input_deposit").empty();
+        $("#input_deposit").val(detail_info["deposit"]);
+
+    }
+</script>
+<script type="text/javascript">
+//    日期控件
+    $("#input_bargained_time").datetimepicker({
+    //        minView: 0,
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii:00',
+        todayBtn:  true,
+        autoclose: true,
+    }).on('changeDate',function(ev){
+       //可以进行一些控制操作
+    });
+    $("#input_house_start_time").datetimepicker({
+//        minView: 0,
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii:00',
+        todayBtn:  true,
+        autoclose: true,
+    }).on('changeDate',function(ev){
+       //可以进行一些控制操作
+    });
+    $("#input_house_proclaimtion_time").datetimepicker({
+//        minView: 0,
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii:00',
+        todayBtn:  true,
+        autoclose: true,
+    }).on('changeDate',function(ev){
+       //可以进行一些控制操作
+    });
+</script>
+</body>
+
+</html>
+

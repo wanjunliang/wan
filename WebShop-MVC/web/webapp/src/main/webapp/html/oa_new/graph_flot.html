@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>亿丰 | 统计</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="../../pagination/style/pagination.css" rel="stylesheet" type="text/css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="../../sampleInBootstrapV3/bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="graph_flot.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="graph_flot.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="table_data_tables.html">数据查询</a></li>
+                        <li><a href="ecommerce_products_grid.html">数据网格</a></li>
+                        <li class="active"><a href="graph_flot.html">数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="graph_flot.html#"><i class="fa fa-table"></i> <span class="nav-label">新闻</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="news_ueditor.html">新增新闻</a></li>
+                        <li><a href="news_list.html">新增列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="graph_flot.html#"><i class="fa fa-table"></i>
+                        <span class="nav-label">个人</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="personalInfoUpdate.html">个人信息编辑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-table"></i>
+                        <span class="nav-label">微信管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="weixinManage.html">微信用户管理</a></li>
+                    </ul>
+                </li>
+                <li class="landing_link">
+                  <a target="_blank" href="../../yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="graph_flot.html#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">欢迎来到天道筑亿丰科技有限公司</span>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="graph_flot.html#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a7.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <small class="pull-right">46h ago</small>
+                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right text-navy">5h ago</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/profile.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="graph_flot.html#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="profile.html">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="grid_options.html">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Flot Charts</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a>Graphs</a>
+                        </li>
+                        <li class="active">
+                            <strong>Flot Charts</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>统计成交价</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="graph_flot.html#">Config option 1</a>
+                                        </li>
+                                        <li><a href="graph_flot.html#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <!--内容-->
+                                    <!--<label>地区</label>-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="锦江" />锦江区-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="武侯" />武侯区-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="青羊" />青羊区-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="金牛" />金牛区-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="成华" />成华区-->
+                                    <!--<input name="checkbox_house_region" type="checkbox" class="i-checks" value="双流" />双流区-->
+                                    <!--<span class="add-on"><i class="icon-th"></i></span>-->
+                                    <!--</span>-->
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label>请输入成交日期:</label>
+                                            </td>
+                                            <td>
+                                                <input id="date_min" name="date_min" type="text" value="" class="form-control" style="width: 200px;" placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>-</label>
+                                            </td>
+                                            <td>
+                                                <input id="date_max" name="date_max" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>入库时间</label>
+                                            </td>
+                                            <td>
+                                                <input id="save_time_start" name="save_time_start" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>-</label>
+                                            </td>
+                                            <td>
+                                                <input id="save_time_end" name="save_time_end" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <input type="button" class="btn btn-primary btn-sm" value="查询" onclick="getChartData()"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="main" style="height:500px" ></div>
+                                    <div id="totalPrice">总成交价:</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--饼图-->
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>饼图</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="graph_flot.html#">Config option 1</a>
+                                        </li>
+                                        <li><a href="graph_flot.html#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content" >
+                                <div class="table-responsive">
+                                    <!--内容-->
+                                    <label>地区</label>
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="锦江" />锦江区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="武侯" />武侯区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="青羊" />青羊区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="金牛" />金牛区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="成华" />成华区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="双流" />双流区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="高新" />高新区
+                                    <input name="pie_checkbox_house_region" type="checkbox" class="i-checks" value="天府新" />天府新区
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label>请输入成交日期:</label>
+                                            </td>
+                                            <td>
+                                                <input id="pie_date_min" name="date_min" type="text" value="" class="form-control" style="width: 200px;" placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>-</label>
+                                            </td>
+                                            <td>
+                                                <input id="pie_date_max" name="date_max" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>入库时间</label>
+                                            </td>
+                                            <td>
+                                                <input id="pie_save_time_start" name="save_time_start" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <label>-</label>
+                                            </td>
+                                            <td>
+                                                <input id="pie_save_time_end" name="save_time_end" type="text" value="" class="form-control" style="width: 200px;"  placeholder="请选择日期..."/>
+                                            </td>
+                                            <td>
+                                                <input type="button" class="btn btn-primary btn-sm" value="查询" onclick="getPieChartData()"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="pie_main" style="height:500px" ></div>
+                                    <div id="pie_totalPrice">总成交价:</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--饼图-->
+        </div>
+
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <!-- Flot -->
+    <!--<script src="js/plugins/flot/jquery.flot.js"></script>-->
+    <!--<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>-->
+    <!--<script src="js/plugins/flot/jquery.flot.resize.js"></script>-->
+    <!--<script src="js/plugins/flot/jquery.flot.pie.js"></script>-->
+    <!--<script src="js/plugins/flot/jquery.flot.time.js"></script>-->
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Flot demo data -->
+    <!--<script src="js/demo/flot-demo.js"></script>-->
+
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- NouSlider -->
+    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+    <!-- Color picker -->
+    <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+    <!-- TouchSpin -->
+    <script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../../sampleInBootstrapV3/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+
+    <script type="text/javascript" src="../../echarts/echarts.js"></script>
+    <script type="text/javascript" src="../../echarts/esl.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //checkbox复选框样式
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function getContextPath(){           //得到项目的路径
+            var pathName = document.location.pathname;
+            var index = pathName.substr(1).indexOf("/");
+            var result = pathName.substr(0,index+1);
+            return result;
+        }
+        var myChart;
+        var eCharts;
+
+        require.config({
+            paths : {
+                'echarts' : '../../echarts/echarts' ,
+                'echarts/chart/line' : '../../echarts/echarts' //需要的组件
+            }
+        });
+
+        require(
+            [ 'echarts',
+                'echarts/chart/line'
+            ], DrawEChart //异步加载的回调函数绘制图表
+        );
+
+        //创建ECharts图表方法
+        function DrawEChart(ec) {
+            eCharts = ec;
+            myChart = eCharts.init(document.getElementById('main'));
+            myChart.showLoading({
+                text : "图表数据正在努力加载..."
+            });
+            //定义图表options
+            var options = {
+                title : {
+                    text : "成交价统计表",
+                    subtext : "一个预备的点击链接",
+                    sublink : "http://www.baidu.com"
+                },
+                tooltip : {
+                    trigger : 'axis'
+                },
+                legend : {
+                    data : [ "每天成交价" ]
+                },
+                toolbox : {
+                    show : true,
+                    feature : {
+                        mark : {
+                            show : true
+                        },
+                        dataView : {
+                            show : true,
+                            readOnly : true
+                        },
+                        magicType : {
+                            show : true,
+                            type : [ 'line', 'bar' ]
+                        },
+                        restore : {
+                            show : true
+                        },
+                        saveAsImage : {
+                            show : true
+                        }
+                    }
+                },
+                calculable : true,
+                xAxis : [ {                     //横坐标
+                    type : 'category',
+                    boundaryGap : false,
+                    data : [ '1', '2', '3', '4', '5', '6', '7' ]
+                } ],
+                yAxis : [ {
+                    type : 'value',
+                    axisLabel : {
+                        formatter : '{value} '
+                    },
+                    splitArea : {
+                        show : true
+                    }
+                } ],
+                dataZoom: [
+                    {
+                        type: 'slider',
+                        xAxisIndex: 0,
+                        start: 10,
+                        end: 60
+                    },
+                    {
+                        type: 'inside',
+                        xAxisIndex: 0,
+                        start: 10,
+                        end: 60
+                    }
+                ],
+                grid : {
+                    width : '80%'
+                },
+                series : [ {                     //数据
+                    name : '每天成交价',
+                    type : 'line',
+                    data : [ 0, 0, 0, 0, 0, 0, 0 ],
+                    markPoint : {
+                        data : [ {
+                            type : 'max',
+                            name : '最大值'
+                        }, {
+                            type : 'min',
+                            name : '最小值'
+                        } ]
+                    },
+                    markLine : {
+                        data : [ {
+                            type : 'average',
+                            name : '平均值'
+                        } ]
+                    }
+                } ]
+            };
+            myChart.setOption(options); //先把可选项注入myChart中
+            myChart.hideLoading();
+//            getChartData();//ajax后台交互
+        }
+        function getChartData() {
+            if(checkForm()==false){
+                return ;
+            }
+            //获得图表的options对象
+            var options = myChart.getOption();
+            var date_min=$("#date_min").val()
+            var date_max=$("#date_max").val()
+            $.ajax({
+                type : "post",
+                async : true, //同步执行
+                url : getContextPath()+"/detail/statisticsTransactionPrice",
+                data : {
+                    date_min: date_min,
+                    date_max: date_max,
+                    save_time_start:$("#save_time_start").val(),
+                    save_time_end:$("#save_time_end").val()
+
+                },
+                dataType : "json", //返回数据形式为json
+                beforeSend: function(){//等待调用方法
+                    myChart.showLoading();
+                },
+                success : function(result) {
+//                        options.legend.data = result.legend;     //分类
+                    options.xAxis[0].data = result.category;//横坐标
+                    options.series[0].data = result.series[0];//数据
+                    myChart.hideLoading();
+                    myChart.setOption(options);
+                    $("#totalPrice").html("总成交价:"+parseFloat(result.totalPrice).toLocaleString()+"元");
+                },
+                error : function(errorMsg) {
+                    alert("不好意思，大爷，图表请求数据失败啦!");
+                    myChart.hideLoading();
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function verifyDate1(s){
+            var patrn=/\d{4}-\d{2}-\d{2}/;
+            if (!patrn.exec(s))
+                return false;
+            return true;
+        }
+        function verifyDate2(s){
+            var patrn=/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/;
+            if (!patrn.exec(s))
+                return false;
+            return true;
+        }
+    </script>
+    <script type="text/javascript">
+        function checkForm(){
+            var date_min=$("#date_min");
+            if(date_min.val()==""){
+                alert("请选择成交时间");
+                date_min.focus();
+                return false;
+            }
+            if(date_min.val()!=""&&verifyDate1(date_min.val())==false){
+                alert("成交时间格式不对,请检查");
+                date_min.focus();
+                return false;
+            }
+            var date_max=$("#date_max");
+            if(date_max.val()==""){
+                alert("请选择成交时间");
+                date_max.focus();
+                return false;
+            }
+            if(date_max.val()!=""&&verifyDate1(date_max.val())==false){
+                alert("成交时间格式不对,请检查");
+                date_max.focus();
+                return false;
+            }
+            var save_time_start=$("#save_time_start");
+            if(save_time_start.val()==""){
+                alert("请选择入库时间");
+                save_time_start.focus();
+                return false;
+            }
+            if(save_time_start.val()!=""&&verifyDate2(save_time_start.val())==false){
+                alert("入库时间格式不对,请检查");
+                save_time_start.focus();
+                return false;
+            }
+            var save_time_end=$("#save_time_end");
+            if(save_time_end.val()==""){
+                alert("请选择入库时间");
+                save_time_end.focus();
+                return false;
+            }
+            if(save_time_end.val()!=""&&verifyDate2(save_time_end.val())==false){
+                alert("入库时间格式不对,请检查");
+                save_time_end.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script type="text/javascript">
+        $("#date_min").datetimepicker({
+            minView: "month", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var date_min=$("#date_min").val();
+            $("#date_max").datetimepicker('setStartDate',date_min);
+            if(date_min>$("#date_max").val()){
+                $("#date_max").val(date_min);
+            }
+            $("#save_time_start").datetimepicker('hide');
+        });
+        $("#date_max").datetimepicker({
+            minView: "month", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var date_max=$("#date_max").val();
+            $("#date_min").datetimepicker('setEndDate',date_max);
+            if(date_max<$("#date_min").val()){
+                $("#date_min").val(date_max);
+            }
+            $("#save_time_end").datetimepicker('hide')
+        });
+        $("#save_time_start").datetimepicker({
+//        minView: "day", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii:00',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var save_time_start=$("#save_time_start").val();
+            $("#save_time_end").datetimepicker('setStartDate',save_time_start);
+            if(save_time_start>$("#save_time_end").val()){
+                $("#save_time_end").val(save_time_start);
+            }
+            $("#save_time_start").datetimepicker('hide');
+        });
+        $("#save_time_end").datetimepicker({
+//        minView: "day", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii:00',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var save_time_end=$("#save_time_end").val();
+            $("#save_time_start").datetimepicker('setEndDate',save_time_end);
+            if(save_time_end<$("#save_time_start").val()){
+                $("#save_time_start").val(save_time_end);
+            }
+            $("#save_time_end").datetimepicker('hide')
+        });
+    </script>
+    <!--饼图的日期-->
+    <script type="text/javascript">
+        $("#pie_date_min").datetimepicker({
+            minView: "month", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var pie_date_min=$("#pie_date_min").val();
+            $("#pie_date_max").datetimepicker('setStartDate',pie_date_min);
+            if(pie_date_min>$("#pie_date_max").val()){
+                $("#pie_date_max").val(pie_date_min);
+            }
+            $("#save_time_start").datetimepicker('hide');
+        });
+        $("#pie_date_max").datetimepicker({
+            minView: "month", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var pie_date_max=$("#pie_date_max").val();
+            $("#pie_date_min").datetimepicker('setEndDate',pie_date_max);
+            if(pie_date_max<$("#pie_date_min").val()){
+                $("#pie_date_min").val(pie_date_max);
+            }
+            $("#pie_save_time_end").datetimepicker('hide')
+        });
+        $("#pie_save_time_start").datetimepicker({
+//        minView: "day", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii:00',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var pie_save_time_start=$("#pie_save_time_start").val();
+            $("#pie_save_time_end").datetimepicker('setStartDate',pie_save_time_start);
+            if(pie_save_time_start>$("#pie_save_time_end").val()){
+                $("#pie_save_time_end").val(pie_save_time_start);
+            }
+            $("#pie_save_time_start").datetimepicker('hide');
+        });
+        $("#pie_save_time_end").datetimepicker({
+//        minView: "day", //选择日期后，不会再跳转去选择时分秒
+            language:  'zh-CN',
+            format: 'yyyy-mm-dd hh:ii:00',
+            todayBtn:  true,
+            autoclose: true,
+        }).on('changeDate',function(ev){
+            var pie_save_time_end=$("#pie_save_time_end").val();
+            $("#pie_save_time_start").datetimepicker('setEndDate',pie_save_time_end);
+            if(pie_save_time_end<$("#pie_save_time_start").val()){
+                $("#pie_save_time_start").val(pie_save_time_end);
+            }
+            $("#pie_save_time_end").datetimepicker('hide')
+        });
+    </script>
+    <!--饼图的日期-->
+<!--饼图数据-->
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myPieChart = echarts.init(document.getElementById('pie_main'));
+
+        // 指定图表的配置项和数据
+        var PieOption = {
+            title : {
+                text: '成都各区成交价',
+                subtext: '2017',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+//                formatter: "{a} <br/>{b} : {c} ({d}%)",
+//                格式化数据
+                formatter: function(p){
+                    return toThousands(p);
+                }
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['锦江区','武侯区','青羊区','金牛区','成华区','双流区','高新区','天府新']
+            },
+            series : [
+                {
+                    name: '成交总价',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:0, name:'锦江区'},
+                        {value:0, name:'武侯区'},
+                        {value:0, name:'青羊区'},
+                        {value:0, name:'金牛区'},
+                        {value:0, name:'成华区'},
+                        {value:0, name:'双流区'},
+                        {value:0, name:'高新区'},
+                        {value:0, name:'天府新区'}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myPieChart.setOption(PieOption);
+    </script>
+    <script type="text/javascript">
+        function checkForm2(){
+            var checkbox_house_region=document.getElementsByName("pie_checkbox_house_region");
+            var count=0;
+            for(var i=0;i<checkbox_house_region.length;i++){
+                if(checkbox_house_region[i].checked==true){
+                    count++;
+                }
+            }
+            if(count==0){
+                alert("请选择地区");
+                return false;
+            }
+
+            var pie_date_min=$("#pie_date_min");
+            if(pie_date_min.val()==""){
+                alert("请选择开始的成交时间");
+                pie_date_min.focus();
+                return false;
+            }
+            if(pie_date_min.val()!=""&&verifyDate1(pie_date_min.val())==false){
+                alert("开始成交时间格式不对,请检查");
+                pie_date_min.focus();
+                return false;
+            }
+            var pie_date_max=$("#pie_date_max");
+            if(pie_date_max.val()==""){
+                alert("请选择结束的成交时间");
+                pie_date_max.focus();
+                return false;
+            }
+            if(pie_date_max.val()!=""&&verifyDate1(pie_date_max.val())==false){
+                alert("结束成交时间格式不对,请检查");
+                pie_date_max.focus();
+                return false;
+            }
+            var pie_save_time_start=$("#pie_save_time_start");
+            if(pie_save_time_start.val()==""){
+                alert("请选择入库的开始时间");
+                pie_save_time_start.focus();
+                return false;
+            }
+            if(pie_save_time_start.val()!=""&&verifyDate2(pie_save_time_start.val())==false){
+                alert("入库的开始时间格式不对,请检查");
+                pie_save_time_start.focus();
+                return false;
+            }
+            var pie_save_time_end=$("#pie_save_time_end");
+            if(pie_save_time_end.val()==""){
+                alert("请选择入库结束时间");
+                pie_save_time_end.focus();
+                return false;
+            }
+            if(pie_save_time_end.val()!=""&&verifyDate2(pie_save_time_end.val())==false){
+                alert("入库的结束时间格式不对,请检查");
+                pie_save_time_end.focus();
+                return false;
+            }
+            return true;
+        }
+        function getPieChartData() {
+            if(checkForm2()==false){
+                return ;
+            }
+            //获得图表的options对象
+            var options = myPieChart.getOption();
+            var pie_checkbox_house_region=[];
+            $("input[name='pie_checkbox_house_region']:checked").each(function() {
+                pie_checkbox_house_region.push($(this).val());
+            });
+            $.ajax({
+                url : getContextPath()+"/detail/statisticsPieBargainedPrice",
+                async: false,
+                type:"post",
+                dataType:"json",
+                traditional :true,    //必须加上该句话来序列化,否则复选框没有效果
+                data : {
+                    pie_date_min: $("#pie_date_min").val(),
+                    pie_date_max: $("#pie_date_max").val(),
+                    pie_save_time_start:$("#pie_save_time_start").val(),
+                    pie_save_time_end:$("#pie_save_time_end").val(),
+                    pie_checkbox_house_region:pie_checkbox_house_region,
+                },
+                dataType : "json", //返回数据形式为json
+                beforeSend: function(){//等待调用方法
+                    myPieChart.showLoading();
+                },
+                success : function(result) {
+                    options.legend[0].data=result.legend_data;
+                    options.series[0].data=result.series_data;
+                    $("#pie_totalPrice").html("总成交价:"+parseFloat(result.pie_totalPrice).toLocaleString()+"元");
+                    myPieChart.hideLoading();
+                    myPieChart.setOption(options);
+                },
+                error : function(errorMsg) {
+                    alert("不好意思，大爷，图表请求数据失败啦!");
+                    myPieChart.hideLoading();
+                }
+            });
+        }
+    </script>
+<!--饼图数据-->
+    <!--格式数据-->
+    <script type="text/javascript">
+        function toThousands(p) {
+            var num = (p.value || 0).toString();
+            var result=parseFloat(num).toLocaleString();
+            var res=p.seriesName+" <br/>"+p.name+" : "+result+" "+"("+p.percent+"%)";
+            return res;
+        }
+    </script>
+
+    <!--格式化数据-->
+</body>
+
+</html>

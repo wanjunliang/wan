@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>亿丰数据分析平台</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/map.css">
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=e917fdfed38a8b0ac51a45d0dbd16e61"></script>
+    <style>
+        .t_title{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+        #chart_map{
+            cursor: pointer;
+        }
+        .t_show{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            亿丰数据分析平台
+        </div> 
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+    <div class="data_time">
+        温馨提示: 点击模块后跳转至详情页面。        
+    </div>
+    <div id="shishi_time" class="shishi_time">
+        2018-09-21 09:39:00
+    </div>
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1 t_btn1" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_1.png" alt="">
+                  总拍卖和总成交
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="left_2 t_btn2" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_2.png" alt="">
+                    总成交率
+                </div>
+                <div id="chart_2" class="chart t_btn9" style="width:100%;height: 280px;"></div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                 <!--右下边框-->
+                 <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_3.png" alt="">
+                    <div id="list_size">
+                        成都
+                    </div>
+                </div>
+                <div id="chart_map" style="width:100%;height:610px;z-index: 999"></div>
+            </div>
+        </div>
+        <div class="main_right fr">
+            <div class="right_1">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title t_btn3" style="cursor: pointer;">
+                    <img src="img/t_4.png" alt="">
+                    住宅拍卖和成交
+                </div>
+                <div id="chart_3" class="echart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="right_2" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title t_btn4" style="cursor: pointer;">
+                    <img src="img/t_5.png" alt="">
+                    住宅成交率
+                </div>
+                <div id="chart_4" class="echart fl" style="width:100%;height: 280px;cursor: pointer;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="data_bottom">
+        <div class="bottom_1 fl">
+            <!--左上边框-->
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <!--右上边框-->
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <!--左下边框-->
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <!--右下边框-->
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title t_btn5" style="cursor: pointer;">
+                <img src="img/t_6.png" alt="">
+                各区拍卖和成交
+            </div>
+            <div id="chart_5" class="echart fl" style="width:100%;height: 250px;margin-top: 15px;"></div>
+        </div>
+        <div class="bottom_center fl">
+            <div class="bottom_2 fl">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+
+
+                <div class="main_title t_btn6" style="cursor: pointer;">
+                    <img src="img/t_7.png" alt="">
+                    今日实时数据
+                </div>
+                <div class="main_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>标的物</th>
+                            <th>起拍价</th>
+                            <th>成交价</th>
+                            <th>结果</th>
+                            <th>竞买人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>09:30:30</td>
+                            <td>桐梓林北路2号</td>
+                            <td>300万</td>
+                            <td></td>
+                            <td>流拍</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>09:30:30</td>
+                            <td>桐梓林北路2号</td>
+                            <td>200万</td>
+                            <td>300万</td>
+                            <td>成交</td>
+                            <td>万某某</td>
+                        </tr>
+                        <tr>
+                            <td>09:30:30</td>
+                            <td>桐梓林北路2号</td>
+                            <td>300万</td>
+                            <td></td>
+                            <td>流拍</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>09:30:30</td>
+                            <td>桐梓林北路2号</td>
+                            <td>200万</td>
+                            <td>300万</td>
+                            <td>成交</td>
+                            <td>万某某</td>
+                        </tr>
+                        <tr>
+                            <td>09:30:30</td>
+                            <td>桐梓林北路2号</td>
+                            <td>200万</td>
+                            <td>300万</td>
+                            <td>成交</td>
+                            <td>万某某</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bottom_3 fl">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+                <div class="main_title t_btn7" style="cursor: pointer;">
+                    <img src="img/t_7.png" alt="">
+                    近5天上拍和成交
+                </div>
+                    <div id="chart_7" class="main_table" style="width:100%;height: 280px;">
+                            <!--<table>-->
+                            <!--<thead>-->
+                            <!--<tr>-->
+                            <!--<th>日期</th>-->
+                            <!--<th>上拍套数</th>-->
+                            <!--<th>成交套数</th>-->
+                            <!--<th>上拍总金额</th>-->
+                            <!--<th>成交总金额</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                            <!--<td>2018-09-20</td>-->
+                            <!--<td>10</td>-->
+                            <!--<td>5</td>-->
+                            <!--<td>100000000</td>-->
+                            <!--<td>50000000</td>-->
+                            <!--</tr>-->
+
+                            <!--</tbody>-->
+                            <!--</table>-->
+                    </div>
+            </div>
+        </div>
+        <div class="bottom_4 fr">
+            <!--左上边框-->
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <!--右上边框-->
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <!--左下边框-->
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <!--右下边框-->
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title t_btn8" style="cursor: pointer;">
+                <img src="img/t_5.png" alt="">
+                一拍上拍和成交
+            </div>
+            <div id="chart_8" class="echart fl" style="width:100%;height: 280px;"></div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+<div class="bottom_5 fr">
+    <!--左上边框-->
+    <div class="t_line_box">
+        <i class="t_l_line"></i>
+        <i class="l_t_line"></i>
+    </div>
+    <!--右上边框-->
+    <div class="t_line_box">
+        <i class="t_r_line"></i>
+        <i class="r_t_line"></i>
+    </div>
+    <!--左下边框-->
+    <div class="t_line_box">
+        <i class="l_b_line"></i>
+        <i class="b_l_line"></i>
+    </div>
+    <!--右下边框-->
+    <div class="t_line_box">
+        <i class="r_b_line"></i>
+        <i class="b_r_line"></i>
+    </div>
+    <div class="main_title t_btn9" style="cursor: pointer;">
+        <img src="img/t_5.png" alt="">
+        二拍上拍和成交
+    </div>
+    <div id="chart_9" class="echart fl" style="width:100%;height: 280px;"></div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+<div class="bottom_6 fr">
+    <!--左上边框-->
+    <div class="t_line_box">
+        <i class="t_l_line"></i>
+        <i class="l_t_line"></i>
+    </div>
+    <!--右上边框-->
+    <div class="t_line_box">
+        <i class="t_r_line"></i>
+        <i class="r_t_line"></i>
+    </div>
+    <!--左下边框-->
+    <div class="t_line_box">
+        <i class="l_b_line"></i>
+        <i class="b_l_line"></i>
+    </div>
+    <!--右下边框-->
+    <div class="t_line_box">
+        <i class="r_b_line"></i>
+        <i class="b_r_line"></i>
+    </div>
+<div class="main_title t_btn10" style="cursor: pointer;">
+    <img src="img/t_5.png" alt="">
+    变卖上拍和成交
+</div>
+<div id="chart_10" class="echart fl" style="width:100%;height: 280px;"></div>
+</div>
+</div>
+
+
+
+
+<!--</div>-->
+<!--</div>-->
+<!--<div class="bottom_7 fr">-->
+    <!--&lt;!&ndash;左上边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="t_l_line"></i>-->
+        <!--<i class="l_t_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;右上边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="t_r_line"></i>-->
+        <!--<i class="r_t_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;左下边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="l_b_line"></i>-->
+        <!--<i class="b_l_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;右下边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="r_b_line"></i>-->
+        <!--<i class="b_r_line"></i>-->
+    <!--</div>-->
+    <!--<div class="main_title t_btn10" style="cursor: pointer;">-->
+        <!--<img src="img/t_5.png" alt="">-->
+        <!--二拍成交率-->
+    <!--</div>-->
+    <!--<div id="chart_11" class="echart fl" style="width:100%;height: 280px;"></div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!--</div>-->
+<!--</div>-->
+<!--<div class="bottom_8 fr">-->
+    <!--&lt;!&ndash;左上边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="t_l_line"></i>-->
+        <!--<i class="l_t_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;右上边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="t_r_line"></i>-->
+        <!--<i class="r_t_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;左下边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="l_b_line"></i>-->
+        <!--<i class="b_l_line"></i>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;右下边框&ndash;&gt;-->
+    <!--<div class="t_line_box">-->
+        <!--<i class="r_b_line"></i>-->
+        <!--<i class="b_r_line"></i>-->
+    <!--</div>-->
+    <!--<div class="main_title t_btn10" style="cursor: pointer;">-->
+        <!--<img src="img/t_5.png" alt="">-->
+        <!--变卖成交率-->
+    <!--</div>-->
+    <!--<div id="chart_12" class="echart fl" style="width:100%;height: 280px;"></div>-->
+<!--</div>-->
+<!--</div>-->
+<</div>
+
+
+
+<!--<div style="text-align:center;">-->
+<!--<p>更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>-->
+<!--</div>-->
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/dataTool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/china.js"></script>
+<script src="js/hunan.js"></script>
+<script src="js/dark.js"></script>
+
+<script src="js/biao1.js"></script>
+<script src="js/biao2.js"></script>
+<script src="js/biao3.js"></script>
+<script src="js/biao4.js"></script>
+<script src="js/biao5.js"></script>
+<script src="js/biao6.js"></script>
+
+<script src="js/biao7.js"></script>
+<script src="js/biao8.js"></script>
+<script src="js/biao9.js"></script>
+<script src="js/biao10.js"></script>
+<script src="js/biao11.js"></script>
+<script src="js/biao12.js"></script>
+<script src="js/biao13.js"></script>
+<script src="js/biao14.js"></script>
+<script src="js/biao15.js"></script>
+<script src="js/biao16.js"></script>
+
+<script src="js/createMap.js"></script>
+<script src="js/click.js"></script>
+<script src="js/time.js"></script>
+
+
+</html>

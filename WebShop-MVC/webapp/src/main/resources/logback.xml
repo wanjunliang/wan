@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+  <!--<conversionRule conversionWord="keep" converterClass="com.neusoft.smis.common"/>-->
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder charset="utf-8">
+        <Pattern>[%d] [%keep] [%thread] [%level] [%file:%line] %msg%n</Pattern>
+    </encoder>
+  </appender>
+  <appender name="logInfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>${loggerLogRoot}/oss.log</File>
+    <encoder>
+        <Pattern>[%d] [%keep] [%thread] [%level] [%file:%line] %msg%n</Pattern>
+        <charset>UTF-8</charset>
+    </encoder>
+
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+          <fileNamePattern>${loggerLogRoot}/oss-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+          <maxHistory>90</maxHistory>
+          <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+              <maxFileSize>512MB</maxFileSize>
+          </TimeBasedFileNamingAndTriggeringPolicy>
+      </rollingPolicy>
+  </appender>
+
+    <appender name="logErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${loggerLogRoot}/oss-error.log</File>
+        <encoder>
+            <Pattern>[%d] [%keep] [%thread] [%level] [%file:%line] %msg%n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${loggerLogRoot}/oss-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>90</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>512MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+  <!--<logger name="druid.sql.Statement" level="DEBUG"/>-->
+  <!--<logger name="druid.sql.DataSource" level="DEBUG"/>-->
+  <!--<logger name="druid.sql.ResultSet" level="DEBUG"/>-->
+  <!--<logger name="druid.sql.Connection" level="DEBUG"/>-->
+  <!--<logger name="druid.sql" level="DEBUG"/>&ndash;&gt;-->
+  <!--<logger name="java.sql" level="DEBUG"/>-->
+  <logger name="com.ibatis" level="INFO"/>
+  <logger name="org.springframework" level="INFO"/>
+  <logger name="org.apache.commons" level="INFO"/>
+  <!--<logger name="com.alibaba.dubbo.config.AbstractConfig" level="OFF"/>-->
+  <!--<logger name="com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry" level="OFF"/>-->
+  <!--<logger name="com.alibaba.dubbo" level="OFF"/>-->
+  <!--<logger name="org.apache.http" level="OFF"/>-->
+  <!--<logger name="org.apache.zookeeper" level="OFF"/>-->
+  <!--<logger name="org.I0Itec.zkclient" level="OFF"/>-->
+
+  <root level="DEBUG" name="com.neusoft.smis.common">
+    <appender-ref ref="stdout"/>
+    <appender-ref ref="logInfoFile"/>
+    <appender-ref ref="logErrorFile"/>
+</root>
+</configuration>

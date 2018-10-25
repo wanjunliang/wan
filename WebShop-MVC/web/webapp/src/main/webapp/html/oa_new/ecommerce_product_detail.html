@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>亿丰 | 房产详情</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="ecommerce_product_detail.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="table_data_tables.html">数据查询</a></li>
+                        <li><a href="ecommerce_products_grid.html">数据网格</a></li>
+                        <li><a href="graph_flot.html">数据统计</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ecommerce_product_detail.html#"><i class="fa fa-table"></i> <span class="nav-label">新闻</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="news_ueditor.html">新增新闻</a></li>
+                        <li><a href="news_list.html">新增列表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ecommerce_product_detail.html#"><i class="fa fa-table"></i>
+                        <span class="nav-label">个人</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="personalInfoUpdate.html">个人信息编辑</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-table"></i>
+                        <span class="nav-label">微信管理</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="weixinManage.html">微信用户管理</a></li>
+                    </ul>
+                </li>
+                <li class="landing_link">
+                    <a target="_blank" href="../../yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="table_data_tables.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到天道筑亿丰科技有限公司</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg">
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>E-commerce product detail</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a>E-commerce</a>
+                    </li>
+                    <li class="active">
+                        <strong>Product detail</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="ibox product-detail">
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-md-5">
+
+
+                                    <div class="product-images">
+
+                                        <div>
+                                            <div class="image-imitation">
+                                                [IMAGE 1]
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="image-imitation">
+                                                [IMAGE 2]
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="image-imitation">
+                                                [IMAGE 3]
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-7">
+
+                                    <h2 class="font-bold m-b-xs" id="h2_house_region">
+                                        Desktop publishing software
+                                    </h2>
+                                    <small id="small_court_name">Many desktop publishing packages and web page editors now.</small>
+                                    <div class="m-t-md">
+                                        <h2 class="product-main-price" id="h2_auction_price">$406,602 <small class="text-muted">起拍价</small> </h2>
+                                        <h2 class="product-main-price" id="h2_current_price">$406,602 <small class="text-muted">当前价</small> </h2>
+                                        <h2 class="product-main-price" id="h2_bargained_price">$406,602 <small class="text-muted">成交价</small> </h2>
+                                    </div>
+                                    <hr>
+
+                                    <h4 id="h4_house_name">Product description</h4>
+
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-md-2" id="div_house_area">
+                                                面积:
+                                            </div>
+                                            <div class="col-md-2" id="div_house_type">
+                                                房产类型:
+                                            </div>
+                                            <div class="col-md-2" id="div_house_proclaimtion_time">
+                                                挂网时间:
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2" id="div_pay_type">
+                                                类型:
+                                            </div>
+                                            <div class="col-md-2" id="div_current_status">
+                                                当前状态:
+                                            </div>
+                                            <div class="col-md-2" id="div_house_start_time">
+                                                开拍时间:
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2" id="div_delayed_period">
+                                                时延周期:
+                                            </div>
+                                            <div class="col-md-2" id="div_evaluate">
+                                                评估价:
+                                            </div>
+                                            <div class="col-md-2" id="div_latest_update_time">
+                                                最新更新时间:
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2" id="div_bargained_time">
+                                                成交时间:
+                                            </div>
+                                            <div class="col-md-2" id="div_house_unit_price">
+                                                单价:
+                                            </div>
+                                            <div class="col-md-2" id="div_preemption">
+                                                优先购买权人:
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2" id="div_data_source">
+                                                第一次数据来源:
+                                            </div>
+                                            <div class="col-md-2" id="div_add_price">
+                                                加价幅度:
+                                            </div>
+                                            <div class="col-md-2" id="div_deposit">
+                                                保证金:
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <dl class="small m-t-md">
+                                        <dt>淘宝网网址</dt>
+                                        <dd id="dd_url_sf_taobao_com"></dd>
+                                        <dt>人资网网址</dt>
+                                        <dd id="dd_url_rmfysszc_com"></dd>
+                                        <!--<dd>Donec id elit non mi porta gravida at eget metus.</dd>-->
+                                        <!--<dt>Malesuada porta</dt>-->
+                                        <!--<dd>Etiam porta sem malesuada magna mollis euismod.</dd>-->
+                                    </dl>
+                                    <hr>
+
+                                    <div>
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary btn-sm" onclick="onClickButtonToProdeuctEdit();"><i class="fa fa-cart-plus"></i> 纠错 </button>
+                                            <button class="btn btn-white btn-sm"><i class="fa fa-star"></i> 操作B </button>
+                                            <button class="btn btn-white btn-sm"><i class="fa fa-envelope"></i> 操作C </button>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ibox-footer">
+                            <span class="pull-right">
+                                Full stock - <i class="fa fa-clock-o"></i> 14.04.2016 10:04 pm
+                            </span>
+                            The generated Lorem Ipsum is therefore always free
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2015
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- slick carousel-->
+<script src="js/plugins/slick/slick.min.js"></script>
+
+<script>
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+    $(document).ready(function(){
+        user_info();
+        $('.product-images').slick({
+            dots: true
+        });
+        selectDetailById(GetQueryString("id"));
+    });
+//    获取url地址传递的参数
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+//    查询信息通过id值
+    function selectDetailById(id){
+        $.ajax({
+            url: getContextPath() + "/detail/findDetailInfoById",
+            async: false,
+            type: "post",
+            dataType: "json",
+            data: {
+                id:id
+            },
+            success: function (data) {
+                loadDetailInfo(data.detail_info);
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    //加载用户的信息
+    function user_info(){
+        click_login_or_logout();
+//             document.getElementById('strong_user_name').innerHTML = getCookie("user_id");
+        //想后台请求用户的信息通过用户ID
+    }
+    //得到cookie
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function decode(s) {
+        return unescape(s.replace(/\\(u[0-9a-fA-F]{4})/gm, '%$1'));
+    }
+    function click_login_or_logout(){
+        var flag_islogined=false;
+        $.ajax({
+            url: getContextPath() + "/login/islogined",
+            async: false,
+            type: "post",
+            dataType: "json",
+            data: {
+            },
+            success: function (data) {
+                if(data.islogined==true){
+                    //已经登录了的
+                    flag_islogined=true;
+                    $("#strong_user_name").html(data.user.user_name);
+                    $("#img_src_head").attr("src",getContextPath()+"/img_head/"+data.user.img_src_head);
+                }
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+        if(flag_islogined==true){
+            //已经登录了
+            var item="<i class='fa fa-sign-out'></i>"+"注销";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').onclick=function () {
+                $.ajax({
+                    url: getContextPath() + "/login/logout",
+                    async: false,
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                    },
+                    success: function (data) {
+                        alert(data.tip);
+                        location.reload();
+                    },
+                    error:function (data) {
+                        alert("发生错误");
+                    }
+                });
+            };
+        }
+        else{
+            //没有登录
+            var item="<i class='fa fa-sign-out'></i>"+"登录";
+//                $("#a_login_or_logout").empty("");
+            document.getElementById('a_login_or_logout').innerHTML=item;
+            document.getElementById('a_login_or_logout').href="login.html";
+        }
+    }
+</script>
+<script type="text/javascript">
+    function loadDetailInfo(detail_info){
+        $("#h2_house_region").empty();
+        document.getElementById('h2_house_region').innerHTML=detail_info['house_region']+'区';
+        $("#small_court_name").empty();
+        document.getElementById('small_court_name').innerHTML='法院:'+detail_info['court_name']
+        $("#h2_auction_price").empty();
+        document.getElementById('h2_auction_price').innerHTML=detail_info['auction_price']+'<small class="text-muted">起拍价</small>';
+        $("#h2_current_price").empty();
+        document.getElementById('h2_current_price').innerHTML=detail_info['current_price']+'<small class="text-muted">当前价</small>';
+        $("#h2_bargained_price").empty();
+        document.getElementById('h2_bargained_price').innerHTML=detail_info['bargained_price']+'<small class="text-muted">成交价</small>';
+        $("#h4_house_name").empty();
+        document.getElementById('h4_house_name').innerHTML=detail_info['house_name'];
+        $("#div_house_area").empty();
+        document.getElementById('div_house_area').innerHTML='面积:'+detail_info['house_area'];
+        $("#div_house_type").empty();
+        document.getElementById('div_house_type').innerHTML='房产类型:'+detail_info['house_type'];
+        $("#div_house_proclaimtion_time").empty();
+        document.getElementById('div_house_proclaimtion_time').innerHTML='挂网时间:'+detail_info['house_proclaimtion_time'];
+        $("#div_pay_type").empty();
+        document.getElementById('div_pay_type').innerHTML='类型:'+detail_info['pay_type'];
+        $("#div_current_status").empty();
+        document.getElementById('div_current_status').innerHTML='当前状态:'+detail_info['current_status'];
+        $("#div_house_start_time").empty();
+        document.getElementById('div_house_start_time').innerHTML='开拍时间:'+detail_info['house_start_time'];
+        $("#div_delayed_period").empty();
+        document.getElementById('div_delayed_period').innerHTML='时延周期:'+detail_info['delayed_period'];
+        $("#div_evaluate").empty();
+        document.getElementById('div_evaluate').innerHTML='评估价:'+detail_info['evaluate'];
+        $("#div_latest_update_time").empty();
+        document.getElementById('div_latest_update_time').innerHTML='最新更新时间:'+detail_info['latest_update_time'];
+        $("#div_bargained_time").empty();
+        document.getElementById('div_bargained_time').innerHTML='成交时间:'+detail_info['bargained_time'];
+        $("#div_house_unit_price").empty();
+        document.getElementById('div_house_unit_price').innerHTML='单价:'+detail_info['house_unit_price'];
+        $("#div_preemption").empty();
+        document.getElementById('div_preemption').innerHTML='优先购买人:'+detail_info['preemption'];
+        $("#div_data_source").empty();
+        document.getElementById('div_data_source').innerHTML='第一次数据来源:'+detail_info['data_source'];
+        $("#div_add_price").empty();
+        document.getElementById('div_add_price').innerHTML='加价幅度:'+detail_info['add_price'];
+        $("#div_deposit").empty();
+        document.getElementById('div_deposit').innerHTML='保证金:'+detail_info['deposit'];
+        $("#dd_url_sf_taobao_com").empty();
+        document.getElementById('dd_url_sf_taobao_com').innerHTML="<a href='"+detail_info['url_sf_taobao_com']+"' target='_blank'>"+detail_info['url_sf_taobao_com']+"</a>";
+        $("#dd_url_rmfysszc_com").empty();
+        document.getElementById('dd_url_rmfysszc_com').innerHTML="<a href='"+detail_info['url_rmfysszc_com']+"' target='_blank'>"+detail_info['url_rmfysszc_com']+"</a>";
+
+    }
+</script>
+<script type="text/javascript">
+    function onClickButtonToProdeuctEdit(){
+        window.location.href="ecommerce_product.html?id="+GetQueryString("id");
+    }
+</script>
+</body>
+
+</html>

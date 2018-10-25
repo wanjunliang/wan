@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.weixin.WeiXinUserMapper" >
+    <resultMap id="BaseResultWeiXinUserMap" type="com.neusoft.smis.common.entity.mysql.weixin.WeiXinUser">
+        <id column="weixin_user_id" property="weixin_user_id" jdbcType="INTEGER" />
+        <result column="openid" property="openid" jdbcType="VARCHAR" />
+        <result column="nickName" property="nickName" jdbcType="VARCHAR" />
+        <result column="avatarUrl" property="avatarUrl" jdbcType="VARCHAR" />
+        <result column="gender" property="gender" jdbcType="VARCHAR" />
+        <result column="city" property="city" jdbcType="VARCHAR" />
+        <result column="province" property="province" jdbcType="VARCHAR" />
+        <result column="country" property="country" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="create_time" property="create_time" jdbcType="VARCHAR" />
+        <collection property="roleList" ofType="com.neusoft.smis.common.entity.mysql.Role">
+            <id column="role_id" property="role_id" jdbcType="INTEGER" />
+            <result column="role_name" property="role_name" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <resultMap id="BaseResultPrivs" type="com.neusoft.smis.common.entity.mysql.Privs">
+        <id column="privs_id" property="privs_id" jdbcType="INTEGER" />
+        <result column="privs_name" property="privs_name" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectIfHaveWeiXinUserByOpenId" resultMap="BaseResultWeiXinUserMap" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinUser">
+        select *
+        from weixin_user
+        where 1=1
+        <if test="openid != null and openid !=''">
+            and openid =#{openid}
+        </if>
+    </select>
+    <select id="selectRolesPrivsWeiXinUserByOpenId" resultMap="BaseResultWeiXinUserMap" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinUser">
+        select *
+        from weixin_user
+        left join relation_weixin_user_role
+        on weixin_user.weixin_user_id=relation_weixin_user_role.weixin_user_id
+        left join role
+        on role.role_id=relation_weixin_user_role.role_id
+        left join relation_role_privs
+        on relation_role_privs.role_id=role.role_id
+        left join privs
+        on privs.privs_id=relation_role_privs.privs_id
+        where weixin_user.openid =#{openid}
+
+    </select>
+    <insert id="insertWeixinUser" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinUser" useGeneratedKeys="true" keyProperty="weixin_user_id">
+        insert into weixin_user
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test='openid != null and openid != "" '>
+                openid,
+            </if>
+            <if test='nickName != null and nickName != "" '>
+                nickName,
+            </if>
+            <if test='avatarUrl != null and avatarUrl != "" '>
+                avatarUrl,
+            </if>
+            <if test='gender != null and gender != "" '>
+                gender,
+            </if>
+            <if test='city != null and city != "" '>
+                city,
+            </if>
+            <if test='province != null and province != "" '>
+                province,
+            </if>
+            <if test='country != null and country != "" '>
+            country,
+            </if>
+            <if test='name != null and name != "" '>
+                `name`,
+            </if>
+            <if test='phone != null and phone != "" '>
+                phone,
+            </if>
+            <if test='create_time != null and create_time != "" '>
+                create_time,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test='openid != null and openid != "" '>
+                #{openid},
+            </if>
+            <if test='nickName != null and nickName != "" '>
+                #{nickName},
+            </if>
+            <if test='avatarUrl != null and avatarUrl != "" '>
+                #{avatarUrl},
+            </if>
+            <if test='gender != null and gender != "" '>
+                #{gender},
+            </if>
+            <if test='city != null and city != "" '>
+                #{city},
+            </if>
+            <if test='province != null and province != "" '>
+                #{province},
+            </if>
+            <if test='country != null and country != "" '>
+                #{country},
+            </if>
+            <if test='name != null and name != "" '>
+                #{name},
+            </if>
+            <if test='phone != null and phone != "" '>
+                #{phone},
+            </if>
+            <if test='create_time != null and create_time != "" '>
+                #{create_time},
+            </if>
+
+        </trim>
+    </insert>
+    <!--更新用户信息-->
+    <update id="updateWeiXinUserByOpenid" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinUser">
+        update weixin_user
+        <set>
+            <if test="nickName != null and nickName!=''" >
+                nickName = #{nickName},
+            </if>
+            <if test="avatarUrl != null and avatarUrl!=''" >
+                avatarUrl = #{avatarUrl},
+            </if>
+            <if test="gender != null and gender!=''" >
+                gender = #{gender},
+            </if>
+            <if test="city != null and city!=''" >
+                city = #{city},
+            </if>
+            <if test="province != null and province!=''" >
+                province = #{province},
+            </if>
+            <if test="country != null and country!=''" >
+                country = #{country},
+            </if>
+            <if test="name != null and name!=''" >
+                `name` = #{name},
+            </if>
+            <if test="phone != null and phone!=''" >
+                phone = #{phone},
+            </if>
+            <if test="create_time != null and create_time!=''" >
+                create_time = #{create_time},
+            </if>
+        </set>
+        where openid = #{openid}
+    </update>
+    <select id="selectWeixinUserList" resultMap="BaseResultWeiXinUserMap" parameterType="Map">
+        select *
+        from weixin_user
+        left join relation_weixin_user_role
+        on weixin_user.weixin_user_id=relation_weixin_user_role.weixin_user_id
+        left join role
+        on role.role_id=relation_weixin_user_role.role_id
+        left join relation_role_privs
+        on relation_role_privs.role_id=role.role_id
+        left join privs
+        on privs.privs_id=relation_role_privs.privs_id
+        where 1=1
+        <if test="keyword!=null and keyword!=''">
+           and (weixin_user.nickName like CONCAT(CONCAT('%', #{keyword}),'%')
+            or weixin_user.name like CONCAT(CONCAT('%', #{keyword}),'%')
+            or weixin_user.phone like CONCAT(CONCAT('%', #{keyword}),'%')
+            or weixin_user.create_time like CONCAT(CONCAT('%', #{keyword}),'%') )
+        </if>
+
+    </select>
+    <select id="selectWeixinUserIfVIP" resultType="java.lang.Integer" parameterType="Map">
+        select count(*)
+        from relation_weixin_user_role
+        JOIN role
+        on role.role_id=relation_weixin_user_role.role_id
+        where relation_weixin_user_role.weixin_user_id=#{weixin_user_id}
+        and role.role_name="会员"
+
+    </select>
+    <select id="selectRoleId" resultType="java.lang.Integer" parameterType="Map">
+        select role_id
+        from role
+        where role_name=#{role_name}
+    </select>
+    <insert id="insert_relation_weixin_user_role"  useGeneratedKeys="true" parameterType="Map">
+        insert into
+        relation_weixin_user_role
+        (weixin_user_id,role_id)
+        VALUES
+        (#{weixin_user_id},#{role_id})
+    </insert>
+    <delete id="deleteWeiXinUserRoleVIP" parameterType="Map" >
+        delete from relation_weixin_user_role
+        where weixin_user_id=#{weixin_user_id} and role_id=#{role_id}
+
+    </delete>
+    <select id="selectPrivsByRoleId" parameterType="Map" resultMap="BaseResultPrivs">
+        select *
+        from privs
+        join relation_role_privs
+        on relation_role_privs.privs_id=privs.privs_id
+        where relation_role_privs.role_id=#{role_id}
+    </select>
+</mapper>

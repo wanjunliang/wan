@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>天道筑亿丰数据详情</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">用户名字</strong>
+                             </span> <span class="text-muted text-xs block">职位<b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#">待开发</a></li>
+                            <li><a href="#">待开发</a></li>
+                            <li><a href="#">待开发</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        亿丰
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="tdzyf_sifa_paimai_list.html.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a href="tdzyf_sifa_paimai_list.html">数据查询</a></li>
+                    </ul>
+                </li>
+
+                <li class="landing_link">
+                    <a target="_blank" href="http://www.tdzyf.xin/tdzyf/yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="#">
+                        <!--<div class="form-group">-->
+                        <!--<input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">-->
+
+                        <!--</div>-->
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到成都天道筑亿丰科技有限公司</span>
+                    </li>
+
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>查询数据界面</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">主页</a>
+                    </li>
+                    <li>
+                        <a href="tdzyf_sifa_paimai_list.html">数据查询</a>
+                    </li>
+                    <li class="active">
+                        <strong>数据详情</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="ibox product-detail">
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <h2 class="font-bold m-b-xs" id="h2_house_name">
+                                        房屋名称地址
+                                    </h2>
+                                    <a id="a_url" target="_blank">网址链接</a>
+                                    <div class="m-t-md">
+                                        <h2 class="product-main-price" id="h2_auction_price">无<small class="text-muted">起拍价</small> </h2>
+                                        <h2 class="product-main-price" id="h2_current_price">无<small class="text-muted">当前价</small> </h2>
+                                        <h2 class="product-main-price" id="h2_bargained_price">无<small class="text-muted">成交价</small> </h2>
+                                    </div>
+                                    <hr>
+
+                                    <h4 >基本信息</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="evaluate">
+                                                <strong>评估价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="current_status">
+                                                <strong>当前状态:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="house_region">
+                                                <strong>房屋地区:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="house_type">
+                                                <strong>房屋类型:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="house_unit_price">
+                                                <strong>单价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size"  id="house_area">
+                                                <strong>面积:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="house_proclaimtion_time">
+                                                <strong>公告时间:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="house_start_time">
+                                                <strong>开拍时间:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="bargained_time">
+                                                <strong>成交时间:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="save_time">
+                                                <strong>保存时间:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="court_name">
+                                                <strong>法院名称:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="data_source">
+                                                <strong>数据来源:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="latest_update_time">
+                                                <strong>最新更新时间:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="viewerCount">
+                                                <strong>围观人数:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="applyCount">
+                                                <strong>报名人数:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size"  id="warnCount">
+                                                <strong>提醒人数:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="auction_stage">
+                                                <strong>竞拍阶段:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="auction_end_time">
+                                                <strong>竞拍结束时间:</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h4 >从自己的数据库以及通过高德地图和百度地图结合查询得到的小区</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wjl_text_size" id="community_name">
+                                                <strong>小区:</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h4 >在链家中查找的信息</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lian_jia_data_id">
+                                                <strong>链家的data_id:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_community_name">
+                                                <strong>小区名字:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_community_address">
+                                                <strong>地址:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_community_building_age">
+                                                <strong>建成年代:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_community_developer">
+                                                <strong>开放商:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_community_total_number_of_building">
+                                                <strong>栋数:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_average_price">
+                                                <strong>均价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_reference_time">
+                                                <strong>参考时间:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_chengjiao_name">
+                                                <strong>最新成交记录:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_chengjiao_unitPrice">
+                                                <strong>最新成交记录的成交单价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_chengjiao_dealDate">
+                                                <strong>最新成交记录的成交时间:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_chengjiao_chengjiao_price">
+                                                <strong>最新成交记录的成交总价:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_chengjiao_number">
+                                                <strong>近三个月之内的成交数量:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_guawang_name">
+                                                <strong>最新挂网信息:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_guawang_unitPrice">
+                                                <strong>挂网信息的单价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size"  id="lianjia_guawang_area">
+                                                <strong>挂网信息的面积:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="lianjia_guawang_price">
+                                                <strong>挂网信息的挂网总价:</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h4 >在房天下中查找的信息</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_projcodeid">
+                                                <strong>房天下的projcodeid:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_community_name">
+                                                <strong>小区名字:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_community_address">
+                                                <strong>地址:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_community_building_age">
+                                                <strong>建成年代:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_community_developer">
+                                                <strong>开发商:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fang_tian_xia_total_number_of_building">
+                                                <strong>栋数:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_average_price">
+                                                <strong>均价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_reference_time">
+                                                <strong>参考时间:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_active">
+                                                <strong>活跃度:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_house_type">
+                                                <strong>最近成交信息的户型:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_unit_price">
+                                                <strong>最近成交单价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_time">
+                                                <strong>最近成交时间:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_area">
+                                                <strong>最近成交面积:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_price">
+                                                <strong>最近成交总价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_chengjiao_number">
+                                                <strong>近三个月内成交数量:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_guawang_unit_price">
+                                                <strong>最新挂网单价:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_guawang_area">
+                                                <strong>最新挂网面积:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="fangtianxia_guawang_price">
+                                                <strong>最新挂网总价:</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h4>周边信息</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="kindergarten">
+                                                <strong>幼儿园:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="primary_school">
+                                                <strong>小学:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="middle_school">
+                                                <strong>中学:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="hospital">
+                                                <strong>医院:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="metro_name">
+                                                <strong>地铁站:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="metro_line">
+                                                <strong>地铁站经过线路:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="metro_status">
+                                                <strong>地铁站的状态:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="metro_remark">
+                                                <strong>地铁站的备注:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="bd_lat">
+                                                <strong>百度坐标(纬度):</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="bd_lng">
+                                                <strong>百度坐标(经度):</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <h4>核算</h4>
+                                    <div class="small text-muted">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="chengben_hesuan">
+                                                <strong>成本核算:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="chengben_unit_price">
+                                                <strong>成本单价:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="xiaoshou_hesuan">
+                                                <strong>销售核算:</strong>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="xiaoshou_unit_price">
+                                                <strong>销售单价:</strong>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wjl_text_size" id="percentage_increase">
+                                                <strong>涨幅百分比((成交价-起拍价)/起拍价):</strong>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+
+
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ibox-footer">
+                            <!--<span class="pull-right">-->
+                                <!--本项目开发日期 <i class="fa fa-clock-o"></i> 2017年11月22日-->
+                            <!--</span>-->
+                            成都天道筑亿丰科技有限公司
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <!--<div class="pull-right">-->
+                <!--10GB of <strong>250GB</strong> Free.-->
+            <!--</div>-->
+            <div>
+                <strong>版权所有</strong> 成都天道筑亿丰科技有限公司 &copy; 2017
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- slick carousel-->
+<script src="js/plugins/slick/slick.min.js"></script>
+
+<script>
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+    $(document).ready(function(){
+        $('.product-images').slick({
+            dots: true
+        });
+        selectDetailById(GetQueryString("id"));
+    });
+//    获取url地址传递的参数
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+//    查询信息通过id值
+    function selectDetailById(id){
+        $.ajax({
+            url: getContextPath() + "/tdzyfSifaPaimaiController/selectTdzyfSifaPaimaiByHouseName",
+            async: false,
+            type: "post",
+            dataType: "json",
+            data: {
+                id:id
+            },
+            success: function (data) {
+                loadDetailInfo(data);
+            },
+            error:function (data) {
+                alert("发生错误");
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    function loadDetailInfo(data){
+        $.each(data['tdzyfSifaPaimaiList'],function(i,detail_info){
+            if(detail_info['house_name']){
+                $("#h2_house_name").empty();
+                document.getElementById('h2_house_name').innerHTML=detail_info['house_name'];
+            }
+            if(detail_info['url']) {
+                $("#a_url").empty();
+                document.getElementById('a_url').innerHTML = "网址链接:"+detail_info['url'];
+                $("#a_url").attr("href",detail_info['url'])
+            }
+            if(detail_info['auction_price']){
+                $("#h2_auction_price").empty();
+                document.getElementById('h2_auction_price').innerHTML="¥"+toThousands(detail_info['auction_price'])+"元"+'<small class="text-muted">起拍价</small>';
+            }
+            if(detail_info['current_price']){
+                $("#h2_current_price").empty();
+                document.getElementById('h2_current_price').innerHTML="¥"+toThousands(detail_info['current_price'])+"元"+'<small class="text-muted">当前价</small>';
+            }
+            if(detail_info['bargained_price']){
+                $("#h2_bargained_price").empty();
+                document.getElementById('h2_bargained_price').innerHTML="¥"+toThousands(detail_info['bargained_price'])+"元"+'<small class="text-muted">成交价</small>';
+            }
+            if(detail_info['evaluate']){
+                $("#evaluate").empty();
+                document.getElementById('evaluate').innerHTML='<strong>评估价:</strong>'+toThousands(detail_info['evaluate'])+"元";
+            }
+            if(detail_info['current_status']){
+                $("#current_status").empty();
+                document.getElementById('current_status').innerHTML="<strong>当前状态:</strong>"+detail_info['current_status'];
+            }
+            if(detail_info['house_region']){
+                $("#house_region").empty();
+                document.getElementById('house_region').innerHTML="<strong>房屋地区:</strong>"+detail_info['house_region'];
+            }
+            if(detail_info['house_type']){
+                $("#house_type").empty();
+                document.getElementById('house_type').innerHTML="<strong>房屋类型:</strong>"+detail_info['house_type'];
+            }
+            if(detail_info['house_unit_price']){
+                $("#house_unit_price").empty();
+                document.getElementById('house_unit_price').innerHTML="<strong>单价:</strong>"+toThousands(detail_info['house_unit_price'])+"元";
+            }
+            if(detail_info['house_area']){
+                $("#house_area").empty();
+                document.getElementById('house_area').innerHTML="<strong>面积:</strong>"+detail_info['house_area'];
+            }
+            if(detail_info['house_proclaimtion_time']){
+                $("#house_proclaimtion_time").empty();
+                var house_proclaimtion_time=new Date(detail_info['house_proclaimtion_time']);
+                document.getElementById('house_proclaimtion_time').innerHTML="<strong>公告时间:</strong>"+house_proclaimtion_time.toLocaleString();
+            }
+            if(detail_info['house_start_time']){
+                $("#house_start_time").empty();
+                var house_start_time=new Date(detail_info['house_start_time'])
+                document.getElementById('house_start_time').innerHTML="<strong>开拍时间:</strong>"+house_start_time.toLocaleString();
+            }
+            if(detail_info['bargained_time']){
+                $("#bargained_time").empty();
+                if(detail_info['bargained_time']){
+                    var bargained_time=new Date(detail_info['bargained_time'])
+                    document.getElementById('bargained_time').innerHTML="<strong>成交时间:</strong>"+bargained_time.toLocaleString();
+                }
+                else{
+                    document.getElementById('bargained_time').innerHTML="<strong>成交时间:</strong>";
+                }
+            }
+            if(detail_info['save_time']){
+                $("#save_time").empty();
+                var save_time=new Date(detail_info['save_time'])
+                document.getElementById('save_time').innerHTML="<strong>保存时间:</strong>"+save_time.toLocaleString();
+            }
+            if(detail_info['court_name']){
+                $("#court_name").empty();
+                document.getElementById('court_name').innerHTML="<strong>法院名称:</strong>"+detail_info['court_name'];
+            }
+            if(detail_info['data_source']){
+                $("#data_source").empty();
+                document.getElementById('data_source').innerHTML="<strong>数据来源:</strong>"+detail_info['data_source'];
+            }
+            if(detail_info['latest_update_time']){
+                $("#latest_update_time").empty();
+                var latest_update_time=new Date(detail_info['latest_update_time'])
+                document.getElementById('latest_update_time').innerHTML="<strong>最新更新时间:</strong>"+latest_update_time.toLocaleString();
+            }
+            if(detail_info['viewerCount']){
+                $("#viewerCount").empty();
+                document.getElementById('viewerCount').innerHTML="<strong>围观人数:</strong>"+detail_info['viewerCount'];
+            }
+            if(detail_info['applyCount']){
+                $("#applyCount").empty();
+                document.getElementById('applyCount').innerHTML="<strong>报名人数:</strong>"+detail_info['applyCount'];
+            }
+            if(detail_info['warnCount']){
+                $("#warnCount").empty();
+                document.getElementById('warnCount').innerHTML="<strong>提醒人数:</strong>"+detail_info['warnCount'];
+            }
+            if(detail_info['auction_stage']){
+                $("#auction_stage").empty();
+                document.getElementById('auction_stage').innerHTML="<strong>竞拍阶段:</strong>"+detail_info['auction_stage'];
+            }
+            if(detail_info['auction_end_time']){
+                $("#auction_end_time").empty();
+                var auction_end_time=new Date(detail_info['auction_end_time'])
+                document.getElementById('auction_end_time').innerHTML="<strong>竞拍结束时间:</strong>"+auction_end_time.toLocaleString();
+            }
+            if(detail_info['community_name']){
+                $("#community_name").empty();
+                document.getElementById('community_name').innerHTML="<strong>小区:</strong>"+detail_info['community_name'];
+            }
+            if(detail_info['lian_jia_data_id']){
+                $("#lian_jia_data_id").empty();
+                document.getElementById('lian_jia_data_id').innerHTML="<strong>链家的data_id:</strong>"+detail_info['lian_jia_data_id'];
+            }
+            if(detail_info['lianjia_community_name']){
+                $("#lianjia_community_name").empty();
+                document.getElementById('lianjia_community_name').innerHTML="<strong>小区名字:</strong>"+detail_info['lianjia_community_name'];
+            }
+            if(detail_info['lianjia_community_address']){
+                $("#lianjia_community_address").empty();
+                document.getElementById('lianjia_community_address').innerHTML="<strong>地址:</strong>"+detail_info['lianjia_community_address'];
+            }
+            if(detail_info['lianjia_community_building_age']){
+                $("#lianjia_community_building_age").empty();
+                document.getElementById('lianjia_community_building_age').innerHTML="<strong>建筑年代:</strong>"+detail_info['lianjia_community_building_age'];
+            }
+            if(detail_info['lianjia_community_developer']){
+                $("#lianjia_community_developer").empty();
+                document.getElementById('lianjia_community_developer').innerHTML="<strong>开发商:</strong>"+detail_info['lianjia_community_developer'];
+            }
+            if(detail_info['lianjia_community_total_number_of_building']){
+                $("#lianjia_community_total_number_of_building").empty();
+                document.getElementById('lianjia_community_total_number_of_building').innerHTML="<strong>栋数:</strong>"+detail_info['lianjia_community_total_number_of_building'];
+            }
+            if(detail_info['lianjia_average_price']){
+                $("#lianjia_average_price").empty();
+                document.getElementById('lianjia_average_price').innerHTML="<strong>均价:</strong>"+toThousands(detail_info['lianjia_average_price'])+"元";
+            }
+            if(detail_info['lianjia_reference_time']){
+                $("#lianjia_reference_time").empty();
+                document.getElementById('lianjia_reference_time').innerHTML="<strong>参考时间:</strong>"+detail_info['lianjia_reference_time'];
+            }
+            if(detail_info['lianjia_chengjiao_name']){
+                $("#lianjia_chengjiao_name").empty();
+                document.getElementById('lianjia_chengjiao_name').innerHTML="<strong>最新成交记录:</strong>"+detail_info['lianjia_chengjiao_name'];
+            }
+            if(detail_info['lianjia_chengjiao_unitPrice']){
+                $("#lianjia_chengjiao_unitPrice").empty();
+                document.getElementById('lianjia_chengjiao_unitPrice').innerHTML="<strong>最新成交记录的单价:</strong>"+detail_info['lianjia_chengjiao_unitPrice'];
+            }
+            if(detail_info['lianjia_chengjiao_dealDate']){
+                $("#lianjia_chengjiao_dealDate").empty();
+                if(detail_info['lianjia_chengjiao_dealDate']){
+                    var lianjia_chengjiao_dealDate=new Date(detail_info['lianjia_chengjiao_dealDate'])
+                    document.getElementById('lianjia_chengjiao_dealDate').innerHTML="<strong>最新成交记录的成交时间:</strong>"+lianjia_chengjiao_dealDate.toLocaleString();
+                }
+                else{
+                    document.getElementById('lianjia_chengjiao_dealDate').innerHTML="<strong>最新成交记录的成交时间:</strong>";
+                }
+            }
+            if(detail_info['lianjia_chengjiao_chengjiao_price']){
+                $("#lianjia_chengjiao_chengjiao_price").empty();
+                document.getElementById('lianjia_chengjiao_chengjiao_price').innerHTML="<strong>最新成交记录的成交总价:</strong>"+toThousands(detail_info['lianjia_chengjiao_chengjiao_price'])+"元";
+            }
+            if(detail_info['lianjia_chengjiao_number']){
+                $("#lianjia_chengjiao_number").empty();
+                document.getElementById('lianjia_chengjiao_number').innerHTML="<strong>近三个月之内的成交数量:</strong>"+detail_info['lianjia_chengjiao_number'];
+            }
+            if(detail_info['lianjia_guawang_name']){
+                $("#lianjia_guawang_name").empty();
+                document.getElementById('lianjia_guawang_name').innerHTML="<strong>挂网信息的名字:</strong>"+detail_info['lianjia_guawang_name'];
+            }
+            if(detail_info['lianjia_guawang_unitPrice']){
+                $("#lianjia_guawang_unitPrice").empty();
+                document.getElementById('lianjia_guawang_unitPrice').innerHTML="<strong>挂网信息的单价:</strong>"+toThousands(detail_info['lianjia_guawang_unitPrice'])+"元";
+            }
+            if(detail_info['lianjia_guawang_area']){
+                $("#lianjia_guawang_area").empty();
+                document.getElementById('lianjia_guawang_area').innerHTML="<strong>挂网信息的面积:</strong>"+detail_info['lianjia_guawang_area'];
+            }
+            if(detail_info['lianjia_guawang_price']){
+                $("#lianjia_guawang_price").empty();
+                document.getElementById('lianjia_guawang_price').innerHTML="<strong>挂网信息的挂网总价:</strong>"+toThousands(detail_info['lianjia_guawang_price'])+"元";
+            }
+            if(detail_info['fang_tian_xia_projcodeid']){
+                $("#fang_tian_xia_projcodeid").empty();
+                document.getElementById('fang_tian_xia_projcodeid').innerHTML="<strong>房天下的projcodeid:</strong>"+detail_info['fang_tian_xia_projcodeid'];
+            }
+            if(detail_info['fang_tian_xia_community_name']){
+                $("#fang_tian_xia_community_name").empty();
+                document.getElementById('fang_tian_xia_community_name').innerHTML="<strong>小区名字:</strong>"+detail_info['fang_tian_xia_community_name'];
+            }
+            if(detail_info['fang_tian_xia_community_address']){
+                $("#fang_tian_xia_community_address").empty();
+                document.getElementById('fang_tian_xia_community_address').innerHTML="<strong>地址:</strong>"+detail_info['fang_tian_xia_community_address'];
+            }
+            if(detail_info['fang_tian_xia_community_building_age']){
+                $("#fang_tian_xia_community_building_age").empty();
+                if(detail_info['fang_tian_xia_community_building_age']){
+//                    var fang_tian_xia_community_building_age=new Date(detail_info['fang_tian_xia_community_building_age'])
+                    document.getElementById('fang_tian_xia_community_building_age').innerHTML="<strong>建筑年代:</strong>"+detail_info['fang_tian_xia_community_building_age'];
+                }
+                else{
+                    document.getElementById('fang_tian_xia_community_building_age').innerHTML="<strong>建筑年代:</strong>";
+                }
+            }
+            if(detail_info['fang_tian_xia_community_developer']){
+                $("#fang_tian_xia_community_developer").empty();
+                document.getElementById('fang_tian_xia_community_developer').innerHTML="<strong>开发商:</strong>"+detail_info['fang_tian_xia_community_developer'];
+            }
+            if(detail_info['fang_tian_xia_total_number_of_building']){
+                $("#fang_tian_xia_total_number_of_building").empty();
+                document.getElementById('fang_tian_xia_total_number_of_building').innerHTML="<strong>栋数:</strong>"+detail_info['fang_tian_xia_total_number_of_building'];
+            }
+            if(detail_info['fangtianxia_average_price']){
+                $("#fangtianxia_average_price").empty();
+                document.getElementById('fangtianxia_average_price').innerHTML="<strong>均价:</strong>"+toThousands(detail_info['fangtianxia_average_price'])+"元";
+            }
+            if(detail_info['fangtianxia_reference_time']){
+                $("#fangtianxia_reference_time").empty();
+                document.getElementById('fangtianxia_reference_time').innerHTML="<strong>参考时间:</strong>"+detail_info['fangtianxia_reference_time'];
+            }
+            if(detail_info['fangtianxia_active']){
+                $("#fangtianxia_active").empty();
+                document.getElementById('fangtianxia_active').innerHTML="<strong>活跃度:</strong>"+detail_info['fangtianxia_active'];
+            }
+            if(detail_info['fangtianxia_chengjiao_house_type']){
+                $("#fangtianxia_chengjiao_house_type").empty();
+                document.getElementById('fangtianxia_chengjiao_house_type').innerHTML="<strong>最近成交信息的户型:</strong>"+detail_info['fangtianxia_chengjiao_house_type'];
+            }
+            if(detail_info['fangtianxia_chengjiao_unit_price']){
+                $("#fangtianxia_chengjiao_unit_price").empty();
+                document.getElementById('fangtianxia_chengjiao_unit_price').innerHTML="<strong>最近成交单价:</strong>"+toThousands(detail_info['fangtianxia_chengjiao_unit_price'])+"元";
+            }
+            $("#fangtianxia_chengjiao_time").empty();
+            if(detail_info['fangtianxia_chengjiao_time']){
+                var fangtianxia_chengjiao_time=new Date(detail_info['fangtianxia_chengjiao_time'])
+                document.getElementById('fangtianxia_chengjiao_time').innerHTML="<strong>最近成交时间:</strong>"+fangtianxia_chengjiao_time.toLocaleDateString();
+            }
+            else{
+                document.getElementById('fangtianxia_chengjiao_time').innerHTML="<strong>最近成交时间:</strong>";
+            }
+            if(detail_info['fangtianxia_chengjiao_area']){
+                $("#fangtianxia_chengjiao_area").empty();
+                document.getElementById('fangtianxia_chengjiao_area').innerHTML="<strong>最近成交面积:</strong>"+detail_info['fangtianxia_chengjiao_area'];
+            }
+            if(detail_info['fangtianxia_chengjiao_price']){
+                $("#fangtianxia_chengjiao_price").empty();
+                document.getElementById('fangtianxia_chengjiao_price').innerHTML="<strong>最近成交总价:</strong>"+toThousands(detail_info['fangtianxia_chengjiao_price'])+"元";
+            }
+            if(detail_info['fangtianxia_chengjiao_number']){
+                $("#fangtianxia_chengjiao_number").empty();
+                document.getElementById('fangtianxia_chengjiao_number').innerHTML="<strong>近三个月内成交数量:</strong>"+detail_info['fangtianxia_chengjiao_number'];
+            }
+            if(detail_info['fangtianxia_guawang_unit_price']){
+                $("#fangtianxia_guawang_unit_price").empty();
+                document.getElementById('fangtianxia_guawang_unit_price').innerHTML="<strong>最新挂网单价:</strong>"+toThousands(detail_info['fangtianxia_guawang_unit_price'])+"元";
+            }
+            if(detail_info['fangtianxia_guawang_area']){
+                $("#fangtianxia_guawang_area").empty();
+                document.getElementById('fangtianxia_guawang_area').innerHTML="<strong>最新挂网面积:</strong>"+detail_info['fangtianxia_guawang_area'];
+            }
+            if(detail_info['fangtianxia_guawang_price']){
+                $("#fangtianxia_guawang_price").empty();
+                document.getElementById('fangtianxia_guawang_price').innerHTML="<strong>最新挂网总价:</strong>"+toThousands(detail_info['fangtianxia_guawang_price'])+"元";
+            }
+            if(detail_info['kindergarten']){
+                $("#kindergarten").empty();
+                document.getElementById('kindergarten').innerHTML="<strong>幼儿园:</strong>"+detail_info['kindergarten'];
+            }
+            if(detail_info['primary_school']){
+                $("#primary_school").empty();
+                document.getElementById('primary_school').innerHTML="<strong>小学:</strong>"+detail_info['primary_school'];
+            }
+            if(detail_info['middle_school']){
+                $("#middle_school").empty();
+                document.getElementById('middle_school').innerHTML="<strong>中学:</strong>"+detail_info['middle_school'];
+            }
+            if(detail_info['hospital']){
+                $("#hospital").empty();
+                document.getElementById('hospital').innerHTML="<strong>医院:</strong>"+detail_info['hospital'];
+            }
+            if(detail_info['chengben_hesuan']){
+                $("#chengben_hesuan").empty();
+                document.getElementById('chengben_hesuan').innerHTML="<strong>成本核算:</strong>"+toThousands(detail_info['chengben_hesuan'])+"元";
+            }
+            if(detail_info['chengben_unit_price']){
+                $("#chengben_unit_price").empty();
+                document.getElementById('chengben_unit_price').innerHTML="<strong>成本单价:</strong>"+toThousands(detail_info['chengben_unit_price'])+"元";
+            }
+            if(detail_info['xiaoshou_hesuan']){
+                $("#xiaoshou_hesuan").empty();
+                document.getElementById('xiaoshou_hesuan').innerHTML="<strong>销售核算:</strong>"+toThousands(detail_info['xiaoshou_hesuan'])+"元";
+            }
+            if(detail_info['xiaoshou_unit_price']){
+                $("#xiaoshou_unit_price").empty();
+                document.getElementById('xiaoshou_unit_price').innerHTML="<strong>销售单价:</strong>"+toThousands(detail_info['xiaoshou_unit_price'])+"元";
+            }
+            if(detail_info['percentage_increase']){
+                $("#percentage_increase").empty();
+                document.getElementById('percentage_increase').innerHTML="<strong>涨幅百分比((成交价-起拍价)/起拍价):</strong>"+toPercent(detail_info['percentage_increase']);
+            }
+            if(detail_info['bd_lat']){
+                $("#bd_lat").empty();
+                document.getElementById('bd_lat').innerHTML="<strong>百度坐标(纬度):</strong>"+detail_info['bd_lat'];
+            }
+            if(detail_info['bd_lng']){
+                $("#bd_lng").empty();
+                document.getElementById('bd_lng').innerHTML="<strong>百度坐标(经度):</strong>"+detail_info['bd_lng'];
+            }
+            if(detail_info['metro_name']){
+                $("#metro_name").empty();
+                document.getElementById('metro_name').innerHTML="<strong>地铁站:</strong>"+detail_info['metro_name'];
+            }
+            if(detail_info['metro_line']){
+                $("#metro_line").empty();
+                document.getElementById('metro_line').innerHTML="<strong>地铁站经过线路:</strong>"+detail_info['metro_line'];
+            }
+            if(detail_info['metro_status']){
+                $("#metro_status").empty();
+                document.getElementById('metro_status').innerHTML="<strong>地铁站的状态:</strong>"+detail_info['metro_status'];
+            }
+            if(detail_info['metro_remark']){
+                $("#metro_remark").empty();
+                document.getElementById('metro_remark').innerHTML="<strong>地铁站的备注:</strong>"+detail_info['metro_remark'];
+            }
+
+        });
+
+
+
+//        $("#dd_url_sf_taobao_com").empty();
+//        document.getElementById('dd_url_sf_taobao_com').innerHTML="<a href='"+detail_info['url_sf_taobao_com']+"' target='_blank'>"+detail_info['url_sf_taobao_com']+"</a>";
+//        $("#dd_url_rmfysszc_com").empty();
+//        document.getElementById('dd_url_rmfysszc_com').innerHTML="<a href='"+detail_info['url_rmfysszc_com']+"' target='_blank'>"+detail_info['url_rmfysszc_com']+"</a>";
+
+    }
+    //数字每三位加逗号
+    function toThousands(num) {
+        var result = [ ], counter = 0;
+        num = (num || 0).toString().split('');
+        for (var i = num.length - 1; i >= 0; i--) {
+            counter++;
+            result.unshift(num[i]);
+            if (!(counter % 3) && i != 0) { result.unshift(','); }
+        }
+        return result.join('');
+    }
+    //数字转百分比
+    function toPercent(point){
+        var str=Number(point*100).toFixed(1);
+        str+="%";
+        return str;
+    }
+</script>
+</body>
+
+</html>

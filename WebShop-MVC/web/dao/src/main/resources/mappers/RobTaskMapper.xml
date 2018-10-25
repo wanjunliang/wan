@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.task.RobTaskMapper" >
+    <resultMap id="BaseResultRobTaskMap" type="com.neusoft.smis.common.entity.mysql.task.RobTask">
+        <id column="rob_task_id" property="rob_task_id" jdbcType="INTEGER" />
+        <result column="user_id" property="user_id" jdbcType="INTEGER" />
+        <result column="tdzyf_sifa_paimai_id" property="tdzyf_sifa_paimai_id" jdbcType="INTEGER" />
+        <result column="rob_task_time" property="rob_task_time" jdbcType="VARCHAR" />
+        <result column="finish_time" property="finish_time" jdbcType="VARCHAR" />
+        <result column="state" property="state" jdbcType="VARCHAR" />
+    </resultMap>
+    <insert id="insertRobTask" parameterType="com.neusoft.smis.common.entity.mysql.task.RobTask" useGeneratedKeys="true" keyProperty="rob_task_id">
+        insert into rob_task
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test='user_id != null and user_id != "" '>
+                user_id,
+            </if>
+            <if test='tdzyf_sifa_paimai_id != null and tdzyf_sifa_paimai_id != "" '>
+                tdzyf_sifa_paimai_id,
+            </if>
+            <if test='rob_task_time != null and rob_task_time != "" '>
+                rob_task_time,
+            </if>
+            <if test='finish_time != null and finish_time != "" '>
+                finish_time,
+            </if>
+            <if test='state != null and state != "" '>
+                state,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test='user_id != null and user_id != "" '>
+                #{user_id},
+            </if>
+            <if test='tdzyf_sifa_paimai_id != null and tdzyf_sifa_paimai_id != "" '>
+                #{tdzyf_sifa_paimai_id},
+            </if>
+            <if test='rob_task_time != null and rob_task_time != "" '>
+                #{rob_task_time},
+            </if>
+            <if test='finish_time != null and finish_time != "" '>
+                #{finish_time},
+            </if>
+            <if test='state != null and state != "" '>
+                #{state},
+            </if>
+
+        </trim>
+    </insert>
+
+    <select id="selectRobTaskList" resultMap="BaseResultRobTaskMap" parameterType="com.neusoft.smis.common.entity.mysql.task.RobTask">
+        select rob_task_id,user_id,tdzyf_sifa_paimai_id,rob_task_time,finish_time,state
+        from rob_task
+        where 1=1
+        <if test="rob_task_id!=null and rob_task_id!=''">
+            and rob_task_id=#{rob_task_id}
+        </if>
+        <if test="user_id!=null and user_id!=''">
+            and user_id=#{user_id}
+        </if>
+        <if test="tdzyf_sifa_paimai_id!=null and tdzyf_sifa_paimai_id!=''">
+            and tdzyf_sifa_paimai_id=#{tdzyf_sifa_paimai_id}
+        </if>
+        <if test="state!=null and state!=''">
+            and state=#{state}
+        </if>
+    </select>
+
+</mapper>

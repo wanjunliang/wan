@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.news.NewsMapper" >
+    <resultMap id="BaseResultNewsTitleMap" type="com.neusoft.smis.common.entity.mysql.news.NewsTitle">
+        <id column="news_title_id" property="news_title_id" jdbcType="INTEGER" />
+        <result column="news_title_text" property="news_title_text" jdbcType="VARCHAR" />
+        <result column="news_create_by" property="news_create_by" jdbcType="INTEGER" />
+        <result column="news_create_date" property="news_create_date" jdbcType="VARCHAR" />
+        <result column="news_update_by" property="news_update_by" jdbcType="INTEGER" />
+        <result column="news_update_date" property="news_update_date" jdbcType="VARCHAR" />
+        <result column="news_content_id" property="news_content_id" jdbcType="INTEGER" />
+        <association property="newsContent" javaType="com.neusoft.smis.common.entity.mysql.news.NewsContent">
+            <id property="news_content_id" column="news_content_id"/>
+            <result property="news_content_text" column="news_content_text"/>
+        </association>
+    </resultMap>
+
+    <!--新增新闻内容,返回主键-->
+    <insert id="insertNewsContent" useGeneratedKeys="true" keyProperty="news_content_id" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsContent">
+        insert into news_content
+        (news_content_text)
+        VALUES
+        (#{news_content_text})
+    </insert>
+    <!--新增新闻标题,返回主键-->
+    <insert id="insertNewsTitle" useGeneratedKeys="true" keyProperty="news_title_id" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsTitle">
+        insert into news_title
+        (news_title_text,news_create_by,news_create_date,news_update_by,news_update_date,news_content_id)
+        VALUES
+        (#{news_title_text},#{news_create_by},#{news_create_date},#{news_update_by},#{news_update_date},#{news_content_id})
+    </insert>
+    <select id="selectNewsTitleContentByNewsTitleId" resultMap="BaseResultNewsTitleMap" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsTitle">
+select
+news_title.news_title_id,
+news_title.news_title_text,
+news_title.news_create_by,
+news_title.news_create_date,
+news_title.news_update_by,
+news_title.news_update_date,
+news_title.news_content_id,
+news_content.news_content_id,
+news_content.news_content_text
+from news_title
+join news_content
+on news_content.news_content_id=news_title.news_content_id
+where news_title.news_title_id=#{news_title_id}
+    </select>
+    <select id="selectNewsTitleList" resultMap="BaseResultNewsTitleMap" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsTitle">
+        select
+        news_title.news_title_id,
+        news_title.news_title_text,
+        news_title.news_create_by,
+        news_title.news_create_date,
+        news_title.news_update_by,
+        news_title.news_update_date,
+        news_title.news_content_id
+        from news_title
+        where 1=1 and (news_title.del_flag!="1" or news_title.del_flag is null)
+        <if test="news_title_id!=null and news_title_id!=''">
+            and news_title_id=#{news_title_id}
+        </if>
+        <if test="news_title_text!=null and news_title_text!=''">
+            and news_title_text like CONCAT(CONCAT('%', #{news_title_text}),'%')
+        </if>
+        <if test="news_create_by!=null and news_create_by!=''">
+            and news_create_by=#{news_create_by}
+        </if>
+        <if test="news_update_by!=null and news_update_by!=''">
+            and news_update_by=#{news_update_by}
+        </if>
+        <if test="news_content_id!=null and news_content_id!=''">
+            and news_content_id=#{news_content_id}
+        </if>
+    </select>
+    <!--修改新闻内容通过新闻内容id-->
+    <update id="updateNewsContentTextByNewsContentId" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsContent">
+        update news_content
+        set news_content_text=#{news_content_text}
+        where news_content_id=#{news_content_id}
+    </update>
+    <!--修改新闻标题通过新闻标题ID-->
+    <update id="updateNewsTitle" parameterType="com.neusoft.smis.common.entity.mysql.news.NewsTitle">
+        update news_title
+        <set>
+            <if test="news_title_text != null and news_title_text!=''" >
+                news_title_text = #{news_title_text},
+            </if>
+            <if test="news_create_by != null and news_create_by!=''" >
+                news_create_by = #{news_create_by},
+            </if>
+            <if test="news_create_date != null and news_create_date!=''" >
+                news_create_date = #{news_create_date},
+            </if>
+            <if test="news_update_by != null and news_update_by!=''" >
+                news_update_by = #{news_update_by},
+            </if>
+            <if test="news_update_date != null and news_update_date!=''" >
+                news_update_date = #{news_update_date},
+            </if>
+            <if test="news_content_id != null and news_content_id!=''" >
+                news_content_id = #{news_content_id},
+            </if>
+            <if test="del_flag != null and del_flag!=''" >
+                del_flag = #{del_flag},
+            </if>
+        </set>
+        where news_title_id = #{news_title_id}
+    </update>
+    <select id="selectNewsTitleListLimitNumber" resultMap="BaseResultNewsTitleMap" parameterType="java.lang.Integer">
+        select news_title_id,news_title_text,
+        news_create_by,news_create_date,
+        news_update_by,news_update_date,
+        news_content_id,del_flag
+        from news_title
+        where (del_flag!="1" or del_flag is null)
+        order by news_update_date DESC
+        limit #{0}
+    </select>
+</mapper>

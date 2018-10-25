@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.weixin.WeiXinYuYueMapper" >
+    <resultMap id="BaseResultYuYueMap" type="com.neusoft.smis.common.entity.mysql.weixin.WeiXinYuYue">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="openid" property="openid" jdbcType="VARCHAR" />
+        <result column="tdzyf_sifa_paimai_id" property="tdzyf_sifa_paimai_id" jdbcType="INTEGER" />
+        <result column="house_name" property="house_name" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="time" property="time" jdbcType="VARCHAR" />
+
+    </resultMap>
+    <insert id="insertYuYue" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinYuYue" useGeneratedKeys="true" keyProperty="id">
+        insert into weixin_yuyue
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test='openid != null and openid != "" '>
+                openid,
+            </if>
+            <if test='tdzyf_sifa_paimai_id != null and tdzyf_sifa_paimai_id != "" '>
+                tdzyf_sifa_paimai_id,
+            </if>
+            <if test='house_name != null and house_name != "" '>
+                house_name,
+            </if>
+            <if test='name != null and name != "" '>
+                `name`,
+            </if>
+            <if test='phone != null and phone != "" '>
+                phone,
+            </if>
+            <if test='time != null and time != "" '>
+                time,
+            </if>
+
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test='openid != null and openid != "" '>
+                #{openid},
+            </if>
+            <if test='tdzyf_sifa_paimai_id != null and tdzyf_sifa_paimai_id != "" '>
+                #{tdzyf_sifa_paimai_id},
+            </if>
+            <if test='house_name != null and house_name != "" '>
+                #{house_name},
+            </if>
+            <if test='name != null and name != "" '>
+                #{name},
+            </if>
+            <if test='phone != null and phone != "" '>
+                #{phone},
+            </if>
+            <if test='time != null and time != "" '>
+                #{time},
+            </if>
+
+        </trim>
+    </insert>
+
+    <select id="selectWeiXinYuYueList" resultMap="BaseResultYuYueMap" parameterType="java.util.Map">
+        select *
+        from weixin_yuyue
+        where 1=1
+        <if test="id!=null and id!=''">
+            and id=#{id}
+        </if>
+        <if test="openid!=null and openid!=''">
+            and openid=#{openid}
+        </if>
+        <if test="tdzyf_sifa_paimai_id!=null and tdzyf_sifa_paimai_id!=''">
+            and tdzyf_sifa_paimai_id=#{tdzyf_sifa_paimai_id}
+        </if>
+        <if test="house_name!=null and house_name!=''">
+            and house_name like CONCAT(CONCAT('%', #{house_name}),'%')
+        </if>
+        <if test="name!=null and name!=''">
+            and `name` like CONCAT(CONCAT('%', #{name}),'%')
+        </if>
+        <if test="phone!=null and phone!=''">
+            and phone like CONCAT(CONCAT('%', #{phone}),'%')
+        </if>
+        <if test="time_1!=null and time_1!=''">
+            and `time` >=#{time_1}
+        </if>
+        <if test="time_2!=null and time_2!=''">
+            and `time` &lt;#{time_2}
+        </if>
+    </select>
+</mapper>

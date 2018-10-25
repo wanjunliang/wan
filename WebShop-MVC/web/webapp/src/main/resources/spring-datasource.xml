@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <tx:annotation-driven/>
+
+    <!-- 配置数据源，从上面配置文件读取 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${db_jdbcDriver}"/>
+        <property name="jdbcUrl" value="${db_jdbcUrl}"/>
+        <property name="password" value="${db_jdbcPassword}"/>
+        <property name="user" value="${db_jdbcUsername}"/>
+        <property name="initialPoolSize" value="${db_initialPoolSize}"/>
+        <property name="acquireIncrement" value="${db_acquireIncrement}"/>
+        <property name="acquireRetryAttempts" value="${db_acquireRetryAttempts}"/>
+        <property name="acquireRetryDelay" value="${db_acquireRetryDelay}"/>
+        <property name="autoCommitOnClose" value="${db_autoCommitOnClose}"/>
+        <property name="testConnectionOnCheckout" value="${db_testConnectionOnCheckout}"/>
+        <property name="maxStatements" value="${db_maxStatements}"/>
+        <property name="maxStatementsPerConnection" value="${db_maxStatementsPerConnection}"/>
+        <property name="maxPoolSize" value="${db_maxPoolSize}"/>
+        <property name="minPoolSize" value="${db_minPoolSize}"/>
+        <property name="maxIdleTime" value="${db_maxIdleTime}"/>
+        <property name="idleConnectionTestPeriod" value="${db_idleConnectionTestPeriod}"/>
+        <property name="breakAfterAcquireFailure" value="${db_breakAfterAcquireFailure}"/>
+        <property name="testConnectionOnCheckin" value="${db_testConnectionOnCheckin}"/>
+    </bean>
+
+
+    <!-- 拦截器方式配置事务 -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="save*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="add*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="delete*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="update*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="edit*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="batch*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="syn*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="exec*" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="view*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="load*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="count*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="check*" propagation="SUPPORTS" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+
+    <!--<aop:config proxy-target-class="true">-->
+    <!--<aop:pointcut id="transactionPointcut"-->
+    <!--expression="execution(public * com.neusoft.train.integration.service.*.*(..))"/>-->
+    <!--<aop:advisor pointcut-ref="transactionPointcut"-->
+    <!--advice-ref="transactionAdvice" order="2"/>-->
+    <!--</aop:config>-->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 数据连接管理 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- myBatis文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 扫描所有实体类对应的xml配置文件-->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:mappers/*Mapper.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.neusoft.smis.dao.mysql" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+
+    <!-- 提供sessionTemplate -->
+    <bean class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+
+    <!-- 声明使用注解式事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

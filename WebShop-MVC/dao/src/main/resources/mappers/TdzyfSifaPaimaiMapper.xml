@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.tdzyf.TdzyfSifaPaimaiMapper" >
+    <resultMap id="BaseResultTdzyfSifaPaimaiMap" type="com.neusoft.smis.common.entity.mysql.TdzyfSifaPaimai">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="house_name" property="house_name" jdbcType="VARCHAR" />
+        <result column="current_price" property="current_price" jdbcType="DOUBLE" />
+        <result column="auction_price" property="auction_price" jdbcType="DOUBLE" />
+        <result column="bargained_price" property="bargained_price" jdbcType="DOUBLE" />
+        <result column="evaluate" property="evaluate" jdbcType="DOUBLE" />
+        <result column="url" property="url" jdbcType="VARCHAR" />
+        <result column="current_status" property="current_status" jdbcType="VARCHAR" />
+        <result column="house_region" property="house_region" jdbcType="VARCHAR" />
+        <result column="house_type" property="house_type" jdbcType="VARCHAR" />
+        <result column="house_unit_price" property="house_unit_price" jdbcType="DOUBLE" />
+        <result column="house_area" property="house_area" jdbcType="DOUBLE" />
+        <result column="house_proclaimtion_time" property="house_proclaimtion_time" jdbcType="TIMESTAMP" />
+        <result column="house_start_time" property="house_start_time" jdbcType="TIMESTAMP" />
+        <result column="bargained_time" property="bargained_time" jdbcType="TIMESTAMP" />
+        <result column="save_time" property="save_time" jdbcType="TIMESTAMP" />
+        <result column="court_name" property="court_name" jdbcType="VARCHAR" />
+        <result column="data_source" property="data_source" jdbcType="VARCHAR" />
+        <result column="latest_update_time" property="latest_update_time" jdbcType="TIMESTAMP" />
+        <result column="viewerCount" property="viewerCount" jdbcType="DOUBLE" />
+        <result column="applyCount" property="applyCount" jdbcType="DOUBLE" />
+        <result column="warnCount" property="warnCount" jdbcType="DOUBLE" />
+        <result column="auction_stage" property="auction_stage" jdbcType="VARCHAR" />
+        <result column="auction_end_time" property="auction_end_time" jdbcType="TIMESTAMP" />
+        <result column="community_name" property="community_name" jdbcType="VARCHAR" />
+        <result column="lian_jia_data_id" property="lian_jia_data_id" jdbcType="VARCHAR" />
+        <result column="lianjia_community_name" property="lianjia_community_name" jdbcType="VARCHAR" />
+        <result column="lianjia_community_address" property="lianjia_community_address" jdbcType="VARCHAR" />
+        <result column="lianjia_community_building_age" property="lianjia_community_building_age" jdbcType="VARCHAR" />
+        <result column="lianjia_community_developer" property="lianjia_community_developer" jdbcType="VARCHAR" />
+        <result column="lianjia_community_total_number_of_building" property="lianjia_community_total_number_of_building" jdbcType="VARCHAR" />
+        <result column="lianjia_average_price" property="lianjia_average_price" jdbcType="DOUBLE" />
+        <result column="lianjia_reference_time" property="lianjia_reference_time" jdbcType="VARCHAR" />
+        <result column="lianjia_chengjiao_name" property="lianjia_chengjiao_name" jdbcType="VARCHAR" />
+        <result column="lianjia_chengjiao_unitPrice" property="lianjia_chengjiao_unitPrice" jdbcType="DOUBLE" />
+        <result column="lianjia_chengjiao_dealDate" property="lianjia_chengjiao_dealDate" jdbcType="TIMESTAMP" />
+        <result column="lianjia_chengjiao_chengjiao_price" property="lianjia_chengjiao_chengjiao_price" jdbcType="DOUBLE" />
+        <result column="lianjia_chengjiao_number" property="lianjia_chengjiao_number" jdbcType="DOUBLE" />
+        <result column="lianjia_guawang_name" property="lianjia_guawang_name" jdbcType="VARCHAR" />
+        <result column="lianjia_guawang_unitPrice" property="lianjia_guawang_unitPrice" jdbcType="DOUBLE" />
+        <result column="lianjia_guawang_area" property="lianjia_guawang_area" jdbcType="DOUBLE" />
+        <result column="lianjia_guawang_price" property="lianjia_guawang_price" jdbcType="DOUBLE" />
+        <result column="fang_tian_xia_projcodeid" property="fang_tian_xia_projcodeid" jdbcType="VARCHAR" />
+        <result column="fang_tian_xia_community_name" property="fang_tian_xia_community_name" jdbcType="VARCHAR" />
+        <result column="fang_tian_xia_community_building_age" property="fang_tian_xia_community_building_age" jdbcType="VARCHAR" />
+        <result column="fang_tian_xia_community_developer" property="fang_tian_xia_community_developer" jdbcType="VARCHAR" />
+        <result column="fang_tian_xia_total_number_of_building" property="fang_tian_xia_total_number_of_building" jdbcType="VARCHAR" />
+        <result column="fangtianxia_average_price" property="fangtianxia_average_price" jdbcType="DOUBLE" />
+        <result column="fangtianxia_reference_time" property="fangtianxia_reference_time" jdbcType="VARCHAR" />
+        <result column="fangtianxia_active" property="fangtianxia_active" jdbcType="VARCHAR" />
+        <result column="fangtianxia_chengjiao_house_type" property="fangtianxia_chengjiao_house_type" jdbcType="VARCHAR" />
+        <result column="fangtianxia_chengjiao_unit_price" property="fangtianxia_chengjiao_unit_price" jdbcType="DOUBLE" />
+        <result column="fangtianxia_chengjiao_time" property="fangtianxia_chengjiao_time" jdbcType="TIMESTAMP" />
+        <result column="fangtianxia_chengjiao_area" property="fangtianxia_chengjiao_area" jdbcType="DOUBLE" />
+        <result column="fangtianxia_chengjiao_price" property="fangtianxia_chengjiao_price" jdbcType="DOUBLE" />
+        <result column="fangtianxia_chengjiao_number" property="fangtianxia_chengjiao_number" jdbcType="DOUBLE" />
+        <result column="fangtianxia_guawang_unit_price" property="fangtianxia_guawang_unit_price" jdbcType="DOUBLE" />
+        <result column="fangtianxia_guawang_area" property="fangtianxia_guawang_area" jdbcType="DOUBLE" />
+        <result column="fangtianxia_guawang_price" property="fangtianxia_guawang_price" jdbcType="DOUBLE" />
+        <result column="kindergarten" property="kindergarten" jdbcType="VARCHAR" />
+        <result column="primary_school" property="primary_school" jdbcType="VARCHAR" />
+        <result column="middle_school" property="middle_school" jdbcType="VARCHAR" />
+        <result column="hospital" property="hospital" jdbcType="VARCHAR" />
+        <result column="chengben_hesuan" property="chengben_hesuan" jdbcType="DOUBLE" />
+        <result column="chengben_unit_price" property="chengben_unit_price" jdbcType="DOUBLE" />
+        <result column="xiaoshou_hesuan" property="xiaoshou_hesuan" jdbcType="DOUBLE" />
+        <result column="xiaoshou_unit_price" property="xiaoshou_unit_price" jdbcType="DOUBLE" />
+        <result column="percentage_increase" property="percentage_increase" jdbcType="DOUBLE" />
+        <result column="bd_lat" property="bd_lat" jdbcType="VARCHAR" />
+        <result column="bd_lng" property="bd_lng" jdbcType="VARCHAR" />
+        <result column="metro_name" property="metro_name" jdbcType="VARCHAR" />
+        <result column="metro_line" property="metro_line" jdbcType="VARCHAR" />
+        <result column="metro_status" property="metro_status" jdbcType="VARCHAR" />
+        <result column="metro_remark" property="metro_remark" jdbcType="VARCHAR" />
+
+        <result column="bidder" property="bidder" jdbcType="VARCHAR" />
+        <result column="transaction_if_complete" property="transaction_if_complete" jdbcType="VARCHAR" />
+        <result column="transaction_the_latest_remark" property="transaction_the_latest_remark" jdbcType="VARCHAR" />
+        <result column="contact_unit_person" property="contact_unit_person" jdbcType="VARCHAR" />
+        <result column="contact_line_1" property="contact_line_1" jdbcType="VARCHAR" />
+        <result column="contact_line_2" property="contact_line_2" jdbcType="VARCHAR" />
+        <result column="lock_house_area" property="lock_house_area" jdbcType="VARCHAR" />
+        <result column="gaode_lng" property="gaode_lng" jdbcType="VARCHAR" />
+        <result column="gaode_lat" property="gaode_lat" jdbcType="VARCHAR" />
+        <result column="taobao_id" property="taobao_id" jdbcType="VARCHAR" />
+        <result column="taobao_title" property="taobao_title" jdbcType="VARCHAR" />
+        <result column="pic_name" property="pic_name" jdbcType="VARCHAR" />
+    </resultMap>
+    <resultMap id="BaseResultTdzyfSifaPaimaiImgMap" type="com.neusoft.smis.common.entity.mysql.TdzyfSifaPaimaiImg">
+        <id column="tdzyf_sifa_paimai_img_id" property="tdzyf_sifa_paimai_img_id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="url" property="url" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectTdzyfSifaPaimaiByHouseName" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="com.neusoft.smis.common.entity.mysql.TdzyfSifaPaimai">
+        select *
+        from tdzyf_sifa_paimai
+        where 1=1
+        <if test="house_name!=null and house_name!=''">
+         and house_name like CONCAT(CONCAT('%', #{house_name}),'%')
+        </if>
+        <if test="id!=null and id!=''">
+         and id=#{id}
+        </if>
+    </select>
+    <select id="selectTdzyfSifaPaimaiByhouse_proclaimtion_time" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="java.util.Map">
+        select *
+        from tdzyf_sifa_paimai
+        where 1=1
+        <if test="startTime != null and startTime !=''">
+            and house_proclaimtion_time>=#{startTime}
+        </if>
+        <if test="endTime != null and endTime !=''">
+           and house_proclaimtion_time &lt;#{endTime}
+        </if>
+        <if test="house_type_list != null and house_type_list !=''">
+           and house_type in (
+            <foreach collection="house_type_list" item="house_type" index="index" separator="," >
+                #{house_type}
+            </foreach>
+            )
+        </if>
+    </select>
+    <select id="selectTdzyfSifaPaimaiByLngLat" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="java.util.Map">
+        select *
+        from tdzyf_sifa_paimai
+        where 1=1
+        <if test="lng_bianjie_you != null and lng_bianjie_you !=''">
+            and bd_lng &lt;=#{lng_bianjie_you}
+        </if>
+        <if test="lng_bianjie_zuo != null and lng_bianjie_zuo !=''">
+           and bd_lng >=#{lng_bianjie_zuo}
+        </if>
+        <if test="lat_bianjie_shang != null and lat_bianjie_shang !=''">
+            and bd_lat &lt;=#{lat_bianjie_shang}
+        </if>
+        <if test="lat_bianjie_xia != null and lat_bianjie_xia !=''">
+            and bd_lat >=#{lat_bianjie_xia}
+        </if>
+        <if test="auction_end_time != null and auction_end_time !=''">
+            and auction_end_time >#{auction_end_time}
+        </if>
+
+    </select>
+    <select id="selectTdzyfSifaPaimaiInWeiXin" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="java.util.Map">
+        select *
+        from tdzyf_sifa_paimai
+        where 1=1
+        <if test="startTime != null and startTime !=''">
+            and house_proclaimtion_time>=#{startTime}
+        </if>
+        <if test="endTime != null and endTime !=''">
+            and house_proclaimtion_time &lt;#{endTime}
+        </if>
+        <if test="house_type_list != null and house_type_list !=''">
+            and house_type in (
+            <foreach collection="house_type_list" item="house_type" index="index" separator="," >
+                #{house_type}
+            </foreach>
+            )
+        </if>
+        <if test="search_input != null and search_input !=''">
+            and house_name like CONCAT(CONCAT('%', #{search_input}),'%')
+        </if>
+        <if test="auction_end_time_1 != null and auction_end_time_1 !=''">
+            and auction_end_time >=#{auction_end_time_1}
+        </if>
+        <if test="auction_end_time_2 != null and auction_end_time_2 !=''">
+            and auction_end_time &lt;#{auction_end_time_2}
+        </if>
+
+
+        <if test="house_region_list != null and house_region_list !='' and  house_region_list.length>0">
+            and house_region in (
+            <foreach collection="house_region_list" item="house_region" index="index" separator="," >
+                #{house_region}
+            </foreach>
+            )
+        </if>
+
+        <if test="auction_price_list != null and auction_price_list !=''">
+            and  (
+            <foreach collection="auction_price_list" item="price" index="index" separator=" " >
+                <if test="index %2==0">
+                    <if test="index !=0">
+                        or
+                    </if>
+                    <if test="price != null and price !=''">
+                        auction_price>=#{price}
+                    </if>
+                </if>
+                <if test="index %2==1">
+                    <if test="price != null and price !=''">
+                       and auction_price &lt; #{price}
+                    </if>
+                </if>
+
+            </foreach>
+            )
+        </if>
+        <if test="area_list != null and area_list !=''">
+            and  (
+            <foreach collection="area_list" item="area" index="index" separator=" " >
+                <if test="index %2==0">
+                    <if test="index !=0">
+                        or
+                    </if>
+                    <if test="area != null and area !=''">
+                        house_area>=#{area}
+                    </if>
+                </if>
+                <if test="index %2==1">
+                    <if test="area != null and area !=''">
+                        and house_area &lt; #{area}
+                    </if>
+                </if>
+
+            </foreach>
+            )
+        </if>
+        order by auction_end_time asc
+        <if test="limit_size != null and limit_size !=''">
+            limit #{limit_start},#{limit_size}
+        </if>
+
+    </select>
+    <select id="selectMyYuyueTdzyfSifaPaimaiDataList" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="com.neusoft.smis.common.entity.mysql.weixin.WeiXinYuYue">
+        select *
+        from tdzyf_sifa_paimai
+        left join weixin_yuyue
+        on tdzyf_sifa_paimai.id=weixin_yuyue.tdzyf_sifa_paimai_id
+        where
+        openid=#{openid}
+    </select>
+    <select id="selectTdzyfSifaPaimaiBusiness" resultMap="BaseResultTdzyfSifaPaimaiMap" parameterType="java.util.Map">
+        select *
+        from tdzyf_sifa_paimai
+        where 1=1
+        <if test="house_type != null and house_type !=''">
+            and house_type =#{house_type}
+        </if>
+
+        <if test="auction_end_time != null and auction_end_time !=''">
+            and auction_end_time >#{auction_end_time}
+        </if>
+
+    </select>
+    <select id="selectTdzyfSifaPaimaiImagesByUrl" resultMap="BaseResultTdzyfSifaPaimaiImgMap" parameterType="java.util.Map">
+        select *
+        from tdzyf_sifa_paimai_img
+        where url=#{url}
+    </select>
+</mapper>

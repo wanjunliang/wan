@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.neusoft.smis.dao.mysql.user.UserMapper" >
+    <resultMap id="BaseResultUserMap" type="com.neusoft.smis.common.entity.mysql.User">
+        <id column="user_id" property="user_id" jdbcType="INTEGER" />
+        <result column="account" property="account" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="user_name" property="user_name" jdbcType="VARCHAR" />
+        <result column="img_src_head" property="img_src_head" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="birthday" property="birthday" jdbcType="VARCHAR" />
+        <result column="mail" property="mail" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="VARCHAR" />
+        <result column="create_date" property="create_date" jdbcType="VARCHAR" />
+        <result column="update_date" property="update_date" jdbcType="VARCHAR" />
+        <collection property="roleList" ofType="com.neusoft.smis.common.entity.mysql.Role">
+            <id column="role_id" property="role_id" jdbcType="INTEGER" />
+            <result column="role_name" property="role_name" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <resultMap id="BaseRoleMap" type="com.neusoft.smis.common.entity.mysql.Role">
+        <id column="role_id" property="role_id" jdbcType="INTEGER" />
+        <result column="role_name" property="role_name" jdbcType="VARCHAR" />
+    </resultMap>
+    <resultMap id="BasePrivsMap" type="com.neusoft.smis.common.entity.mysql.Privs">
+        <id column="privs_id" property="privs_id" jdbcType="INTEGER" />
+        <result column="privs_name" property="privs_name" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectUsers" resultMap="BaseResultUserMap">
+select `user`.user_id,`user`.account,`user`.password,`user`.user_name
+from `user`
+    </select>
+    <select id="selectUserBuAccountPassword" resultMap="BaseResultUserMap" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        select `user`.user_id,`user`.account,`user`.password,
+                `user`.user_name,
+                `user`.img_src_head,
+                `user`.phone,
+                `user`.birthday,
+                `user`.mail,
+                `user`.sex,
+                `user`.create_date,
+                `user`.update_date
+        from `user`
+        where `user`.account=#{account} and `user`.password=#{password}
+    </select>
+    <select id="selectUserRolesByUser_id" resultMap="BaseRoleMap" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        select role.role_id,role.role_name
+        from role
+        join relation_user_role
+        on relation_user_role.role_id=role.role_id
+        join `user`
+        on `user`.user_id=relation_user_role.user_id
+        where `user`.user_id=#{user_id}
+    </select>
+    <select id="selectPrivsByRoleId" resultMap="BasePrivsMap" parameterType="com.neusoft.smis.common.entity.mysql.Role">
+        select privs.privs_id,privs.privs_name
+        from privs
+        join relation_role_privs
+        on relation_role_privs.privs_id=privs.privs_id
+        join role
+        on role.role_id=relation_role_privs.role_id
+        where role.role_id=#{role_id}
+    </select>
+    <select id="selectUserByAccount" resultMap="BaseResultUserMap" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        select `user`.user_id,`user`.account,`user`.password,`user`.user_name,img_src_head,phone,birthday,mail,sex,create_date,update_date
+        from `user`
+        where `user`.account=#{account}
+    </select>
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="user_id" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        insert into `user`
+(account,password,user_name,img_src_head,phone,birthday,mail,sex,create_date,update_date)
+VALUES
+(#{account},#{password},#{user_name},#{img_src_head},#{phone},#{birthday},#{mail},#{sex},#{create_date},#{update_date})
+    </insert>
+    <select id="selectRoleByRoleName" resultMap="BaseRoleMap">
+        select role.role_id,role.role_name
+        from role
+        where role.role_name=#{0}
+    </select>
+    <insert id="insertRelationUserRoleByUserIdRoleId" useGeneratedKeys="true">
+        insert into
+        relation_user_role
+        (user_id,role_id)
+        VALUES
+        (#{0},#{1})
+    </insert>
+    <select id="selectUser" resultMap="BaseResultUserMap" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        select `user`.user_id,`user`.account,`user`.password,`user`.user_name,img_src_head,phone,birthday,mail,sex,create_date,update_date
+        from `user`
+        where 1=1
+        <if test="user_id!=null and user_id!=''">
+            and `user`.user_id=#{user_id}
+        </if>
+        <if test="account!=null and account!=''">
+            and `user`.account=#{account}
+        </if>
+        <if test="user_name!=null and user_name!=''">
+            and `user`.user_name=#{user_name}
+        </if>
+    </select>
+    <!--更新用户信息-->
+    <update id="updateUserInfoByUserId" parameterType="com.neusoft.smis.common.entity.mysql.User">
+        update `user`
+        <set>
+            <if test="password != null and password!=''" >
+                password = #{password},
+            </if>
+            <if test="user_name != null and user_name!=''" >
+                user_name = #{user_name},
+            </if>
+            <if test="img_src_head != null and img_src_head!=''" >
+                img_src_head = #{img_src_head},
+            </if>
+            <if test="phone != null and phone!=''" >
+                phone = #{phone},
+            </if>
+            <if test="birthday != null and birthday!=''" >
+                birthday = #{birthday},
+            </if>
+            <if test="mail != null and mail!=''" >
+                mail = #{mail},
+            </if>
+            <if test="sex != null and sex!=''" >
+                sex = #{sex},
+            </if>
+            <if test="create_date != null and create_date!=''" >
+                create_date = #{create_date},
+            </if>
+            <if test="update_date != null and update_date!=''" >
+                update_date = #{update_date},
+            </if>
+        </set>
+        where user_id = #{user_id}
+    </update>
+</mapper>

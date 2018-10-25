@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>亿丰科技-司法拍卖地图-高德地图版</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=e917fdfed38a8b0ac51a45d0dbd16e61"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../sampleInBootstrapV3/bootstrap/css/bootstrap.css">
+    <script src="../sampleInBootstrapV3/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <!--<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+    <script src="js/poiPicker.js"></script>
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+</head>
+<body>
+<div id="container"></div>
+<div class="button_group">
+        <div class="col-xs-6 col-md-4 col-sm-4 col-lg-4 ">
+            <div id="pickerBox" class="input-group">
+                <input id="pickerInput" type="text" class="form-control" placeholder="请输入地址">
+                <div id="poiInfo"></div>
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" onclick="clickSousuo();">搜索</button>
+            </span>
+            </div><!-- /input-group -->
+        </div>
+        <div class="col-xs-0 col-md-5 col-sm-4 col-lg-5 "></div>
+        <div class="btn-group col-xs-6 col-md-3 col-sm-4 col-lg-3 " role="group" aria-label="...">
+            <!--<button type="button" class="btn btn-default">全景</button>-->
+            <button type="button" class="btn btn-default" onclick="clickPuTongMap();">普通地图</button>
+            <button type="button" class="btn btn-default" onclick="clickWeiXinMap();">卫星地图</button>
+        </div>
+</div>
+</body>
+</html>

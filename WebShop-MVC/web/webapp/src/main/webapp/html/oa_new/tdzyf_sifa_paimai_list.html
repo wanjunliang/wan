@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns: xmlns: xmlns:>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>天道筑亿丰数据查询页面</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img id="img_src_head" alt="image" class="img-circle" src="img/taibai.png" style="width: 80px;"/>
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="table_data_tables.html#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold" id="strong_user_name">用户名字</strong>
+                             </span> <span class="text-muted text-xs block">职位<b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#">待开发</a></li>
+                            <li><a href="#">待开发</a></li>
+                            <li><a href="#">待开发</a></li>
+                            <li class="divider"></li>
+                            <li><a>注销</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        亿丰
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="tdzyf_sifa_paimai_list.html.html#"><i class="fa fa-table"></i> <span class="nav-label">数据</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li class="active"><a href="tdzyf_sifa_paimai_list.html">数据查询</a></li>
+                    </ul>
+                </li>
+
+                <li class="landing_link">
+                    <a target="_blank" href="http://www.tdzyf.xin/tdzyf/yfhtml/index.html"><i class="fa fa-star"></i> <span class="nav-label">公司主页</span> <span class="label label-warning pull-right">TO</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="#">
+
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">欢迎来到成都天道筑亿丰科技有限公司</span>
+                    </li>
+                    <li>
+                        <a id="a_login_or_logout">
+                            <i class="fa fa-sign-out"></i>登录
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>查询数据界面</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">主页</a>
+                    </li>
+                    <li>
+                        <a>数据</a>
+                    </li>
+                    <li class="active">
+                        <strong>数据查询</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>天道筑亿丰数据查询,支持淘宝司法拍卖和京东司法拍卖的数据</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="news_list.html#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label  class="col-xs-12 col-sm-3 col-md-3 col-lg-2 control-label">输入标的物的名字或者地址:</label>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <input type="text" class="form-control" id="input_house_name">
+                                    </div>
+                                    <input type="button" class="col-xs-12 col-sm-2 col-md-2 col-lg-2 btn btn-primary btn-sm" value="查询" onclick="selectTdzyfSifaPaimaiData();"/>
+                                </div>
+
+                            </form>
+
+                                <!--</div>-->
+                            <div id="div_foo_table">
+
+                                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="2">
+                                    <thead>
+                                    <tr>
+                                        <th data-toggle="true">标的物名称</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<!-- Input Mask-->
+<script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- NouSlider -->
+<script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
+<!-- Color picker -->
+<script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- Clock picker -->
+<script src="js/plugins/clockpicker/clockpicker.js"></script>
+<!-- TouchSpin -->
+<script src="js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+
+<!-- FooTable -->
+<script src="js/plugins/footable/footable.all.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+    });
+</script>
+<!-- Page-Level Scripts -->
+<script type="text/javascript">
+    function getContextPath(){           //得到项目的路径
+        var pathName = document.location.pathname;
+        var index = pathName.substr(1).indexOf("/");
+        var result = pathName.substr(0,index+1);
+        return result;
+    }
+
+</script>
+<script type="text/javascript">
+    function createFooTable(data) {
+        var fooTable='<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="10">'+
+            '<thead>'+
+            '<tr>'+
+            '<th data-toggle="true">标的物名称</th>'+
+            '<th data-hide="all">当前价格</th>'+
+            '<th data-hide="all">当前状态</th>'+
+            '<th data-hide="all">公告时间</th>'+
+            '<th data-hide="all">结束时间</th>'+
+//            '<th data-hide="all">最后修改人</th>'+
+//            '<th data-hide="all">最后修改时间</th>'+
+            '<th>操作</th>'+
+            '</tr>'+
+            '</thead>';
+        var tempList='<tbody>';
+        $.each(data['tdzyfSifaPaimaiList'],function(i,newTitle){
+            var house_proclaimtion_time=new Date(newTitle['house_proclaimtion_time'])
+            var auction_end_time=new Date(newTitle['auction_end_time'])
+            var temp="<tr>" +
+                "<td>"+newTitle['house_name']+"</td>"+
+                "<td>"+newTitle['current_price']+"</td>"+
+                "<td>"+newTitle['current_status']+"</td>"+
+                "<td>"+house_proclaimtion_time.toLocaleString()+"</td>"+
+                "<td>"+auction_end_time.toLocaleString()+"</td>"+
+//                "<td>"+newTitle['update_name']+"</td>"+
+//                "<td>"+newTitle['news_update_date']+"</td>"+
+                '<td>' +
+                    '<div class="btn-group">' +
+                    '<button class="btn-white btn btn-xs" onclick="toDetail('+newTitle['id']+');">详情</button>' +
+//                    '<button class="btn-white btn btn-xs" onclick="confirm(deleteNews,'+newTitle['news_title_id']+','+newTitle['news_content_id']+');">删除</button>' +
+                    '</div>'
+                '</td>'+
+                "</tr>";
+            tempList+=temp;
+        });
+        tempList+='</tbody>';
+        fooTable+=tempList;
+        fooTable+='<tfoot>'+
+            '<tr>'+
+            '<td colspan="5">'+
+            '<ul class="pagination pull-right"></ul>'+
+            '</td>'+
+            '</tr>'+
+            '</tfoot>'+
+            '</table>';
+        $("#div_foo_table").empty("");
+        $("#div_foo_table").append(fooTable);
+//        document.getElementById('div_foo_table').innerHTML=fooTable;
+//        生成footable
+        $('.footable').footable();
+    }
+</script>
+
+
+<script type="text/javascript">
+    function selectTdzyfSifaPaimaiData() {
+
+        input_house_name=$("#input_house_name").val()
+        if(input_house_name==null||input_house_name==""){
+            alert("请输入标的物的地址或者名字");
+        }
+        $.ajax({
+            url:getContextPath()+"/tdzyfSifaPaimaiController/selectTdzyfSifaPaimaiByHouseName",
+//            async: false,
+            type:"post",
+            dataType:"json",
+            data:{
+                house_name:input_house_name
+            },
+            success:function(data){
+                //判断一下数量是否为0
+                if(data['list_size']==0){
+                    alert("没有找到数据");
+                }
+                else{
+                    createFooTable(data);
+                }
+            },
+            error:function (data) {
+                alert("请求数据失败");
+            }
+        });
+
+    }
+    function toDetail(id) {
+        window.location.href='tdzyf_sifa_paimai_detail.html?id='+id;
+    }
+</script>
+
+</body>
+
+</html>
